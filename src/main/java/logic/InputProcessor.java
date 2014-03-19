@@ -29,9 +29,9 @@ public class InputProcessor extends HttpServlet {
         //String daysalive = days.toString();
 
         request.setAttribute("fullname", fullname);
-        request.setAttribute("length", "99"); //TODO: remove hardcoding
+        request.setAttribute("length", length); //TODO: remove hardcoding
         request.setAttribute("dob", dob);
-        request.setAttribute("daysalive", "20"); //TODO: remove hardcoding
+        request.setAttribute("daysalive", days); //TODO: remove hardcoding
         RequestDispatcher disp = request.getRequestDispatcher("result.jsp");
         disp.forward(request, response);
     }
