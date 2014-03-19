@@ -78,7 +78,6 @@
             <form id="details" action="process.do" class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input id="firstname" type="text" name="firstname" class="form-control" placeholder="First">
-                    <input id="lastname" type="text" name="lastname" class="form-control" placeholder="Last">
                     <input id="dob" type="date" name="dateofbirth" class="form-control" placeholder="DOB">
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
