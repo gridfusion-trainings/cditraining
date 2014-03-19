@@ -73,7 +73,7 @@
 
 <div class="container marketing">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-10">
 
             <form id="details" action="process.do" class="navbar-form navbar-left" role="search">
                 <div class="form-group">
