@@ -79,7 +79,7 @@
                 <div class="form-group">
                     <input id="firstname" type="text" name="firstname" class="form-control" placeholder="First name">
                     <input id="lastname" type="text" name="lastname" class="form-control" placeholder="Last name">
-                    <input id="dob" type="date" name="dateofbirth" class="form-control" placeholder="Date of birth">
+                    <input id="dob" type="date" name="dateofbirth" class="form-control" placeholder="DOB">
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
