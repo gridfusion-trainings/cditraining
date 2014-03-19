@@ -25,12 +25,13 @@ public class InputProcessor extends HttpServlet {
         Calculator calc = new Calculator();
         String fullname = calc.calculateName(first, last);
         int length = calc.calculateNumberOfChars(fullname);
-        int daysalive = calc.calculateDaysAlive(dob);
+        int days = calc.calculateDaysAlive(dob);
+        //String daysalive = days.toString();
 
         request.setAttribute("fullname", fullname);
-        request.setAttribute("length", length);
+        request.setAttribute("length", "99"); //TODO: remove hardcoding
         request.setAttribute("dob", dob);
-        request.setAttribute("daysalive", daysalive);
+        request.setAttribute("daysalive", "20"); //TODO: remove hardcoding
         RequestDispatcher disp = request.getRequestDispatcher("result.jsp");
         disp.forward(request, response);
     }
