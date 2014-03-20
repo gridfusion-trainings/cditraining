@@ -24,5 +24,10 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         Assert.assertEquals(14, calc.calculateNumberOfChars("Michael Palotas"));
     }
+    
+    @Test
+    public void failThisTest() {
+    	Assert.fail();
+    }
 
 }
