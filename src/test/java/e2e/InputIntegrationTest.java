@@ -33,7 +33,7 @@ public class InputIntegrationTest {
 
 		
 		WebElement firstname = driver.findElement(By.id("firstname"));
-		Assert.assertTrue(firstname.isDisplayed());
+		Assert.assertTrue(!firstname.isDisplayed());
 		
 		driver.findElement(By.id("submitbutton")).click();
 
