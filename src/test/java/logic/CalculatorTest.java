@@ -27,7 +27,7 @@ public class CalculatorTest {
     
     @Test
     public void passThisTest() {
-    	Assert.assertTrue(true):
+    	Assert.assertTrue(true);
     }
 
 }
