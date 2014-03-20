@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class InputTest {
 	
+	/*
 	@Test
 	public void fillPage() throws InterruptedException, MalformedURLException{
 		
@@ -26,5 +27,6 @@ public class InputTest {
 		Thread.sleep(2000);
 		driver.quit();
 	}
+	*/
 
 }
