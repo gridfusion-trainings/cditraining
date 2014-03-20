@@ -31,14 +31,18 @@ public class InputIntegrationTest {
 		driver.findElement(By.id("lastname")).sendKeys("PALOTAS");
 		driver.findElement(By.id("dob")).sendKeys("02/09/1936");
 
-		
-		WebElement firstname = driver.findElement(By.id("firstname"));
-		Assert.assertTrue(!firstname.isDisplayed());
-		
-		driver.findElement(By.id("submitbutton")).click();
+		try {
+			
+			WebElement firstname = driver.findElement(By.id("firstname"));
+			Assert.assertTrue(!firstname.isDisplayed());	
+			driver.findElement(By.id("submitbutton")).click();
+			Thread.sleep(2000);
+		}
+		finally {
+			driver.quit();
+	
+		}
 
-		Thread.sleep(2000);
-		driver.quit();
 	}
 	
 
