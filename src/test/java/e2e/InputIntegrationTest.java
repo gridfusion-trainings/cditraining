@@ -5,10 +5,13 @@ import interfaces.IntegrationTest;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -27,7 +30,13 @@ public class InputIntegrationTest {
 		driver.findElement(By.id("firstname")).sendKeys("MICHAEL");
 		driver.findElement(By.id("lastname")).sendKeys("PALOTAS");
 		driver.findElement(By.id("dob")).sendKeys("02/09/1936");
+
+		
+		WebElement firstname = driver.findElement(By.id("firstname"));
+		Assert.assertTrue(firstname.isDisplayed());
+		
 		driver.findElement(By.id("submitbutton")).click();
+
 		Thread.sleep(2000);
 		driver.quit();
 	}
