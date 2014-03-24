@@ -35,6 +35,13 @@
   
   <build>
   <plugins>
+  
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+  
         <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>2.3.2</version>
@@ -43,6 +50,19 @@
           <target>1.7</target>
         </configuration>
       </plugin>
+      
+      	<!-- integrate maven-cobertura-plugin to project site  -->
+	<plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>cobertura-maven-plugin</artifactId>
+		<version>2.6</version>
+		<configuration>
+			<formats>
+				<format>html</format>
+				<format>xml</format>
+			</formats>
+		</configuration>
+	</plugin>
       
       
 
@@ -112,19 +132,6 @@
 		<version>2.7</version>
 		<configuration>
 			<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-		</configuration>
-	</plugin>
- 
-	<!-- integrate maven-cobertura-plugin to project site  -->
-	<plugin>
-		<groupId>org.codehaus.mojo</groupId>
-		<artifactId>cobertura-maven-plugin</artifactId>
-		<version>2.6</version>
-		<configuration>
-			<formats>
-				<format>html</format>
-				<format>xml</format>
-			</formats>
 		</configuration>
 	</plugin>
  
