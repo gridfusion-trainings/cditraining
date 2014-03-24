@@ -34,7 +34,6 @@ public class InputIntegrationTest {
 		try {
 			
 			WebElement firstname = driver.findElement(By.id("firstname"));
-			Assert.assertTrue(!firstname.isDisplayed());	
 			driver.findElement(By.id("submitbutton")).click();
 			Thread.sleep(2000);
 		}
