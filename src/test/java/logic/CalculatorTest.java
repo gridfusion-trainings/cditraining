@@ -1,5 +1,7 @@
 package logic;
 
+import java.util.Date;
+
 import logic.Calculator;
 import org.junit.Assert;
 import org.junit.Test;
@@ -23,6 +25,12 @@ public class CalculatorTest {
 
         Calculator calc = new Calculator();
         Assert.assertEquals(14, calc.calculateNumberOfChars("Michael Palotas"));
+    }
+    
+    @Test
+    public void shouldReturnNumberOfDaysAlive() {
+    	Calculator calc = new Calculator();
+    	Assert.assertEquals(1048, calc.calculateDaysAlive("2011-05-11"));
     }
     
     @Test
