@@ -30,4 +30,8 @@ public class CalculatorTest {
     	Assert.assertTrue(true);
     }
 
+    @Test
+    public void passAnotherTest() {
+    	Assert.assertTrue(true);
+    }
 }
