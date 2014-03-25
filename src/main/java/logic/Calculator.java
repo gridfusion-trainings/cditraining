@@ -20,7 +20,7 @@ public class Calculator {
     }
 
 
-    public int calculateDaysAlive(String dateInString) {
+    public int calculateDaysAlive(String dateInString) throws Exception {
         SimpleDateFormat dobFormatter = new SimpleDateFormat("yyyy-MM-dd");
 
         Date today = new Date();
@@ -35,7 +35,7 @@ public class Calculator {
             if(diffDays < 0) {
 
                 //TODO: throw exception here later
-                return -1;
+            	throw new Exception();
             }
             else {
                 return (int)diffDays;

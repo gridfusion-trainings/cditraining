@@ -32,18 +32,25 @@ public class CalculatorTest {
     }
     
     @Test(groups = {"unit"})
-    public void shouldReturnNumberOfDaysAlive() {
+    public void shouldReturnNumberOfDaysAlive() throws Exception {
     	
     	Calculator calc = new Calculator();
     	Assert.assertEquals(1049, calc.calculateDaysAlive("2011-05-11"));
     }
 
+    
     @Test(groups = {"unit"})
-    public void shouldReturnMinusOne() {
+    public void shouldThrowException() {
     	
     	Calculator calc = new Calculator();
-    	calc.calculateDaysAlive("2015-12-31");
-    }
-    
-    
+    	try {
+    		// invalid case because date is in the future
+			calc.calculateDaysAlive("2015-12-31");
+		} catch (Exception e) {
+			// this is an expected exception
+			e.printStackTrace();
+			Assert.assertTrue(true);
+		}
+    } 
+       
 }

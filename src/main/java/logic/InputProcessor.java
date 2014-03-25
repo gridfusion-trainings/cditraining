@@ -25,7 +25,14 @@ public class InputProcessor extends HttpServlet {
         Calculator calc = new Calculator();
         String fullname = calc.calculateName(first, last);
         int length = calc.calculateNumberOfChars(fullname);
-        int days = calc.calculateDaysAlive(dob);
+        int days=0;
+        
+		try {
+			days = calc.calculateDaysAlive(dob);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
         request.setAttribute("fullname", fullname);
         request.setAttribute("length", length); 
