@@ -31,7 +31,7 @@ public class CalculatorTest {
     public void shouldReturnNumberOfDaysAlive() {
     	
     	Calculator calc = new Calculator();
-    	Assert.assertEquals(1048, calc.calculateDaysAlive("2011-05-11"));
+    	Assert.assertEquals(1049, calc.calculateDaysAlive("2011-05-11"));
     }
     
     @Test
