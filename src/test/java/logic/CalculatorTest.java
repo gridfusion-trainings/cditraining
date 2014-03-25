@@ -33,10 +33,5 @@ public class CalculatorTest {
     	Calculator calc = new Calculator();
     	Assert.assertEquals(1049, calc.calculateDaysAlive("2011-05-11"));
     }
-    
-    @Test
-    public void passThisTest() {
-    	Assert.assertTrue(true);
-    }
 
 }
