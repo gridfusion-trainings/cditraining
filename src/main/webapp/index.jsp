@@ -32,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">GRID</a>
+                    <a class="navbar-brand">GRIDFUSION NEW</a>
                 </div>
 
                 <div class="navbar-collapse collapse">
