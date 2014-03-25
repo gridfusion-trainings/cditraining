@@ -1,26 +1,21 @@
 package e2e;
 
-import interfaces.IntegrationTest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import junit.framework.Assert;
-
-import org.junit.Test;
-import org.junit.experimental.categories.Category;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
 
 //mark class as an integration test
-@Category(IntegrationTest.class)
 public class InputIntegrationTest {
 	
-	@Test
+	@Test(groups = {"integration"})
 	public void fillPage() throws InterruptedException, MalformedURLException{
 		
 		DesiredCapabilities capability = DesiredCapabilities.chrome();
