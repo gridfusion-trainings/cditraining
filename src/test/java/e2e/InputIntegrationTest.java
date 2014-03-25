@@ -22,7 +22,7 @@ public class InputIntegrationTest {
 		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
 		
 		driver.get("http://localhost:8080/tmf2");
-		driver.findElement(By.id("firstname")).sendKeys("KATHARINA");
+		driver.findElement(By.id("firstname")).sendKeys("TULIP");
 		driver.findElement(By.id("lastname")).sendKeys("PALOTAS");
 		driver.findElement(By.id("dob")).sendKeys("02/09/1936");
 
