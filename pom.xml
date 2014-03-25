@@ -59,6 +59,7 @@
 		<artifactId>cobertura-maven-plugin</artifactId>
 		<version>2.6</version>
 		<configuration>
+			<groups>${group}</groups>
 			<formats>
 				<format>html</format>
 				<format>xml</format>

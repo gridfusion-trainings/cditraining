@@ -38,4 +38,12 @@ public class CalculatorTest {
     	Assert.assertEquals(1049, calc.calculateDaysAlive("2011-05-11"));
     }
 
+    @Test(groups = {"unit"})
+    public void shouldReturnMinusOne() {
+    	
+    	Calculator calc = new Calculator();
+    	calc.calculateDaysAlive("2015-12-31");
+    }
+    
+    
 }
