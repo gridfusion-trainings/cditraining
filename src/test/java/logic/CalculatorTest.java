@@ -39,6 +39,14 @@ public class CalculatorTest {
     	Assert.assertEquals(1051, calc.calculateDaysAlive("2011-05-11"));
     }
 
+    
+    @Test(groups = {"unit"})
+    public void shouldReturnNumberOfDaysAlive1() throws Exception {
+    	
+    	Calculator calc = new Calculator();
+    	Assert.assertEquals(1051, calc.calculateDaysAlive("2011-05-11"));
+    }
+    
     /*
     @Test(groups = {"unit"})
     public void shouldThrowException() {
