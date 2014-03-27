@@ -60,15 +60,6 @@ public class CalculatorTest {
     	Assert.assertEquals(c, 4);
     }
 
-    @Test(groups = {"unit"})
-    public void shouldReturnNumberOfDaysAlive3() throws Exception {
-    	
-
-    	int a=2;
-    	int b=3;
-    	int c =a+b;
-    	Assert.assertEquals(c, 5);
-    }
     
     
     /*
