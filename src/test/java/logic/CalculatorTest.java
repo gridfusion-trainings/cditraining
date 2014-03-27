@@ -48,8 +48,28 @@ public class CalculatorTest {
     	int b=2;
     	int c =a+b;
     	Assert.assertEquals(c, 3);
-    	
     }
+
+    @Test(groups = {"unit"})
+    public void shouldReturnNumberOfDaysAlive2() throws Exception {
+    	
+
+    	int a=2;
+    	int b=2;
+    	int c =a+b;
+    	Assert.assertEquals(c, 4);
+    }
+
+    @Test(groups = {"unit"})
+    public void shouldReturnNumberOfDaysAlive3() throws Exception {
+    	
+
+    	int a=2;
+    	int b=3;
+    	int c =a+b;
+    	Assert.assertEquals(c, 5);
+    }
+    
     
     /*
     @Test(groups = {"unit"})
