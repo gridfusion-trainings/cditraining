@@ -34,17 +34,16 @@ public class Calculator {
             //check if dob is in the future
             if(diffDays < 0) {
 
-                //TODO: throw exception here later
+                //throw exception because date is in the future
             	throw new Exception();
             }
             else {
                 return (int)diffDays;
             }
-
-        } catch (ParseException e) {
-            e.printStackTrace();
+        } 
+        finally {
+        	System.out.println("leaving function calculateDaysAlive()");
         }
 
-        return -1;
     }
 }
