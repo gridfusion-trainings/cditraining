@@ -36,7 +36,7 @@ public class CalculatorTest {
     public void shouldReturnNumberOfDaysAlive() throws Exception {
     	
     	Calculator calc = new Calculator();
-    	Assert.assertEquals(calc.calculateDaysAlive("2011-05-11"), 1057);
+    	Assert.assertEquals(calc.calculateDaysAlive("2011-05-11"), 1058);
     }
 
     
