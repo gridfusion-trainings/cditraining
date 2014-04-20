@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>TMF App Result</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -83,7 +83,7 @@
                         String daysalive = request.getAttribute("daysalive").toString();
                         out.print("Your full name is: " + fullname + " and is " + length + " characters long" );
                         out.print("<p>Your DOB is: " + dob + "<p>");
-                        out.print("<p>Days alive: " + daysalive + "<p>");
+                        out.print("<div id=daysalive><p>Days ALIVE: " + daysalive + "<p></div>");
                     %>
                 </div>
             </div>
