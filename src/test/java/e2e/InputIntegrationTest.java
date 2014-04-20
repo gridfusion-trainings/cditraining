@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 //mark class as an integration test
@@ -29,13 +30,12 @@ public class InputIntegrationTest {
 		try {
 			driver.findElement(By.id("submitbutton")).click();
 			Thread.sleep(2000);
+			
+			Assert.assertTrue(driver.findElement(By.id("daysalive")).getText().contentEquals("Days ALIVE: 3854"));
 		}
 		finally {
 			driver.quit();
 	
 		}
-
 	}
-	
-
 }

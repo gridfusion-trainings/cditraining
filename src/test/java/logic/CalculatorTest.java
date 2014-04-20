@@ -1,14 +1,8 @@
 package logic;
 
 
-import java.text.ParseException;
-import java.util.Date;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-
-import logic.Calculator;
 
 /**
  * Created by mpalotas on 18/03/14.
@@ -29,7 +23,7 @@ public class CalculatorTest {
         String fullname = "Michael Palotas";
 
         Calculator calc = new Calculator();
-        Assert.assertEquals(14, calc.calculateNumberOfChars("Michael Palotas"));
+        Assert.assertEquals(14, calc.calculateNumberOfChars(fullname));
     }
     
     @Test(groups = {"unit"})

@@ -59,9 +59,6 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="mailto:info@gridfusion.net"><span class="glyphicon glyphicon-envelope"></span></a></li>
-                        <li><a href="index_de.html"><img src="img/flag_DE.jpeg"> DE</a></li>
-                        <li class=" active pull-right" ><a href="index.html"><img src="img/flag_UK.jpeg"> EN</a></li>
-
                     </ul>
                 </div>
             </div>

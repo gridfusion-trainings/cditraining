@@ -42,7 +42,6 @@ public class Calculator {
             }
         } 
         finally {
-        	System.out.println("leaving function calculateDaysAlive()");
         }
 
     }
