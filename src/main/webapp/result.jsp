@@ -78,7 +78,7 @@
                         String length = request.getAttribute("length").toString();
                         String dob = request.getAttribute("dob").toString();
                         String daysalive = request.getAttribute("daysalive").toString();
-                        out.print("Your full name is: " + fullname + " and is " + length + " characters long" );
+                        out.print("Your full name is in the new version is: " + fullname + " and is " + length + " characters long" );
                         out.print("<p>Your DOB is: " + dob + "<p>");
                         out.print("<div id=daysalive><p>Days ALIVE: " + daysalive + "<p></div>");
                     %>
