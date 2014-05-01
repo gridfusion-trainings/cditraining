@@ -77,7 +77,6 @@
                     <input id="firstname" type="text" name="firstname" class="form-control" placeholder="Firstname">
                     <input id="lastname" type="text" name="lastname" class="form-control" placeholder="Lastname">
                     <input id="dob" type="date" name="dateofbirth" class="form-control" placeholder="DOB">
-                    <input id="tmp" type="text" name="tmp" class="form-control" placeholder="tmp input">
                 </div>
                 <button id="submitbutton" type="submit" class="btn btn-default">Submit</button>
             </form>

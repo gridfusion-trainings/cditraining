@@ -31,7 +31,7 @@ public class InputIntegrationTest {
 			driver.findElement(By.id("submitbutton")).click();
 			Thread.sleep(2000);
 			
-			Assert.assertTrue(driver.findElement(By.id("daysalive")).getText().contentEquals("Days ALIVE: 3854"));
+			Assert.assertTrue(driver.findElement(By.id("daysalive")).getText().contentEquals("Days ALIVE: 3863"));
 		}
 		finally {
 			driver.quit();
