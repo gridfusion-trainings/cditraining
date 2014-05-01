@@ -29,7 +29,7 @@ public class Calculator {
         try {
             yourDateOfBirth = dobFormatter.parse(dateInString);
             long diff = today.getTime() - yourDateOfBirth.getTime();
-            long diffDays = diff / (24 * 60 * 61 * 1000);
+            long diffDays = diff / (24 * 60 * 60 * 1000);
 
             //check if dob is in the future
             if(diffDays < 0) {
