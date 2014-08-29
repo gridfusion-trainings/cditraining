@@ -36,6 +36,7 @@
   </dependencies>
   
   <build>
+    
   <plugins>
   
      <plugin>
@@ -76,7 +77,7 @@
                 </configuration>                
              </plugin>      
    </plugins> 
-   <finalName>tmf2</finalName>
+   <finalName>tmf2-${BUILD_ID}</finalName>
   </build>
   
   
