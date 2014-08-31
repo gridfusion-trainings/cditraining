@@ -33,6 +33,17 @@
             <artifactId>selenium-server</artifactId>
             <version>2.40.0</version>
         </dependency>
+        
+        <dependency>
+            <groupId>io.selendroid</groupId>
+            <version>0.10.0</version>
+            <artifactId>selendroid-standalone</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.selendroid</groupId>
+            <version>0.10.0</version>
+            <artifactId>selendroid-client</artifactId>
+        </dependency>
   </dependencies>
   
   <build>
@@ -78,6 +89,11 @@
 					<systemPropertyVariables>
                         <environment>${env.USER}</environment>
                     </systemPropertyVariables>
+                    
+                    <!-- just testing this for now, in order to not need groups in test itself -->
+                    <suiteXmlFiles>
+            			<suiteXmlFile>testng.xml</suiteXmlFile>
+          			</suiteXmlFiles>
                 </configuration>                
              </plugin>      
    </plugins> 

@@ -1,6 +1,8 @@
 package e2e;
 
 
+import io.selendroid.SelendroidCapabilities;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -13,12 +15,29 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 //mark class as an integration test
 public class InputIntegrationTest {
 	
+	@DataProvider(name = "platforms", parallel = true)
+	  public Object[][] getCapabilities() {
+
+	    DesiredCapabilities androidWeb = new DesiredCapabilities();
+	    androidWeb.setCapability("platform", "ANDROID");
+	    androidWeb.setCapability("browserName", "android");
+	    androidWeb.setCapability("version", "");
+	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,false);
+
+	    return new Object[][]{
+	        {DesiredCapabilities.firefox()},
+	        {DesiredCapabilities.chrome()},
+	        {androidWeb},
+	    };
+	  }
 	
 	
 	public static String URLFactory(String environment) {
@@ -31,14 +50,22 @@ public class InputIntegrationTest {
 		return url;
 	}
 	
-	@Parameters("environment")
-	@Test(groups = {"integration", "production"})
-	public void fillPage(String environment) throws InterruptedException, MalformedURLException{
+
+	
+	@Test(dataProvider="platforms", groups = {"integration", "production"})
+	public void fillPage(DesiredCapabilities caps) throws InterruptedException, MalformedURLException{
+		
+		
+		String environment = System.getProperty("environment");
+		System.out.println("Environment: " + environment);
 		
 		String url = URLFactory(environment);
 		
-		DesiredCapabilities capability = DesiredCapabilities.chrome();
-		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.112:4444/wd/hub"), capability);
+		//DesiredCapabilities capability = DesiredCapabilities.chrome();
+		//WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.112:4444/wd/hub"), capability);
+		
+		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.112:4444/wd/hub"), caps);
+
 		
 		driver.get(url);
 		driver.findElement(By.id("firstname")).sendKeys("Tulip");
@@ -53,6 +80,7 @@ public class InputIntegrationTest {
 			Assert.assertTrue(true);
 		}
 		finally {
+			Thread.sleep(5000);
 			driver.quit();
 	
 		}
