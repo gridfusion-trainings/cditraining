@@ -91,9 +91,10 @@
                     </systemPropertyVariables>
                     
                     <!-- just testing this for now, in order to not need groups in test itself -->
-                    <suiteXmlFiles>
+                    <!-- <suiteXmlFiles>
             			<suiteXmlFile>testng.xml</suiteXmlFile>
           			</suiteXmlFiles>
+          			 -->
                 </configuration>                
              </plugin>      
    </plugins> 
