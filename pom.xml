@@ -74,6 +74,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
 					<groups>${group}</groups>
+					<!-- the next section is new for selecting the enviroment via maven -->
+					<systemPropertyVariables>
+                        <environment>${env.USER}</environment>
+                    </systemPropertyVariables>
                 </configuration>                
              </plugin>      
    </plugins> 
