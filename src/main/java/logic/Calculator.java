@@ -9,9 +9,14 @@ import java.util.Date;
  */
 public class Calculator {
 
-    public String calculateName (String first, String last)
-    {
-        return first + " " + last;
+    public String calculateName (String first, String last) throws InputIsNullException
+    {    	
+    	if(first== null || last==null) {
+    		throw new InputIsNullException();
+    	}
+    	else {
+            return first + " " + last;    		
+    	}
     }
 
     public int calculateNumberOfChars(String fullname) {
@@ -20,7 +25,7 @@ public class Calculator {
     }
 
 
-    public int calculateDaysAlive(String dateInString) throws Exception {
+    public int calculateDaysAlive(String dateInString) throws DateInFutureException, ParseException {
         SimpleDateFormat dobFormatter = new SimpleDateFormat("yyyy-MM-dd");
 
         Date today = new Date();
@@ -35,7 +40,7 @@ public class Calculator {
             if(diffDays < 0) {
 
                 //throw exception because date is in the future
-            	throw new Exception();
+            	throw new DateInFutureException();
             }
             else {
                 return (int)diffDays;

@@ -19,24 +19,38 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.uiautomation.ios.IOSCapabilities;
 
 //mark class as an integration test
 public class InputIntegrationTest {
 	
+	//local remote webdriver
+	//public final String GRIDURL="http://192.168.1.6:4444/wd/hub";
+	
+	//Selenium Grid Hub with Android on OSX
+	public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
+
+	
 	@DataProvider(name = "platforms", parallel = true)
 	  public Object[][] getCapabilities() {
 
+		//Android
 	    DesiredCapabilities androidWeb = new DesiredCapabilities();
 	    androidWeb.setCapability("platform", "ANDROID");
 	    androidWeb.setCapability("browserName", "android");
 	    androidWeb.setCapability("version", "");
-	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,false);
+	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,true);
+	    
+	    //IOS
+	    IOSCapabilities ipad = IOSCapabilities.ipad("Safari");
+	    ipad.setBrowserName("mobile safari/ipad");
 
 	    return new Object[][]{
-	        {DesiredCapabilities.firefox()},
-	        {DesiredCapabilities.chrome()},
-	        {DesiredCapabilities.safari()},	        
+	        //{DesiredCapabilities.firefox()},
+	        //{DesiredCapabilities.chrome()},
+	        //{DesiredCapabilities.safari()},	        
 	        //{androidWeb},
+	        //{ipad},
 	    };
 	  }
 	
@@ -46,6 +60,7 @@ public class InputIntegrationTest {
 		Map urls = new HashMap();
 		urls.put("QA", "http://192.168.1.6:8080/tmf2");
 		urls.put("PRODUCTION", "http://ec2-54-68-4-210.us-west-2.compute.amazonaws.com:8080/tmf2");	
+		urls.put("VAGRANT", "http://localhost:4568/tmf2/");	
 		
 		String url = (String) urls.get(environment);
 		return url;
@@ -58,27 +73,18 @@ public class InputIntegrationTest {
 		
 		
 		String environment = System.getProperty("environment");
-		System.out.println("Environment: " + environment);
+		System.out.println("Environment: " + environment + "   Browser: " + caps.getBrowserName());
 		
-		String url = URLFactory(environment);
-		
-		//DesiredCapabilities capability = DesiredCapabilities.chrome();
-		//WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.112:4444/wd/hub"), capability);
-		
-		WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.112:4444/wd/hub"), caps);
-
+		String url = URLFactory(environment);		
+		WebDriver driver = new RemoteWebDriver(new URL(GRIDURL), caps);
 		
 		driver.get(url);
-		driver.findElement(By.id("firstname")).sendKeys("Tulip");
-		driver.findElement(By.id("lastname")).sendKeys("Palotas");
-		driver.findElement(By.id("dob")).sendKeys("10/01/2003");
 
 		try {
-			driver.findElement(By.id("submitbutton")).click();
-			Thread.sleep(2000);
-			
-			//Assert.assertTrue(driver.findElement(By.id("daysalive")).getText().contentEquals("Days ALIVE: 3865"));
-			Assert.assertTrue(true);
+			driver.findElement(By.id("firstname")).sendKeys("Tulip");
+			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
+			driver.findElement(By.id("submitbutton")).click();			
+
 		}
 		finally {
 			Thread.sleep(5000);

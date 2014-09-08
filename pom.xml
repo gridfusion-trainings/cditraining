@@ -44,6 +44,16 @@
             <version>0.10.0</version>
             <artifactId>selendroid-client</artifactId>
         </dependency>
+        
+        <dependency>
+            <groupId>org.uiautomation</groupId>
+            <artifactId>ios-driver</artifactId>
+            <version>0.0.6-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/bin/ios-server-0.6.5-jar-with-dependencies.jar</systemPath>
+        </dependency>
+        
+        
   </dependencies>
   
   <build>
@@ -60,8 +70,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>2.3.2</version>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.7</source>
+          <target>1.7</target>
         </configuration>
       </plugin>
       

@@ -15,14 +15,20 @@ public class CalculatorTest {
 	
 
     @Test(groups = {"unit"})
-
-    public void shouldReturnFullnameTest() {
+    public void shouldReturnFullnameTest() throws InputIsNullException {
 
         Calculator calc = new Calculator();
         Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", "Palotas"));
-        System.out.println("System getproperty: " + System.getProperty("environment"));
-
     }
+    
+
+    @Test(groups = {"unit"}, expectedExceptions=InputIsNullException.class)
+    public void shouldThrowInputIsNullException() throws InputIsNullException {
+
+        Calculator calc = new Calculator();
+        Assert.assertEquals("Michael Palotas", calc.calculateName(null, "Palotas"));
+    }    
+    
 
     @Parameters("environment")
     @Test(groups = {"unit"})
@@ -36,11 +42,11 @@ public class CalculatorTest {
 
     }
     
-    @Test(groups = {"unit"})
+    @Test(groups = {"unit"}, expectedExceptions=DateInFutureException.class)
     public void shouldReturnNumberOfDaysAlive() throws Exception {
     	
     	Calculator calc = new Calculator();
-    	Assert.assertEquals(calc.calculateDaysAlive("2011-05-11"), 1208);
+    	calc.calculateDaysAlive("2099-12-31");
     }
 
 }

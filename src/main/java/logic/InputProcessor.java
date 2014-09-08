@@ -20,24 +20,33 @@ public class InputProcessor extends HttpServlet {
 
         String first = request.getParameter("firstname");
         String last = request.getParameter("lastname");
-        String dob = request.getParameter("dateofbirth");
+        int length=0;
+        //String dob = request.getParameter("dateofbirth");
 
         Calculator calc = new Calculator();
-        String fullname = calc.calculateName(first, last);
-        int length = calc.calculateNumberOfChars(fullname);
+        String fullname=null;
+		try {
+			fullname = calc.calculateName(first, last);
+	        length = calc.calculateNumberOfChars(fullname);
+		} catch (InputIsNullException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         int days=0;
         
+        /*
 		try {
 			days = calc.calculateDaysAlive(dob);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		*/
 
         request.setAttribute("fullname", fullname);
         request.setAttribute("length", length); 
-        request.setAttribute("dob", dob);
-        request.setAttribute("daysalive", days);
+        //request.setAttribute("dob", dob);
+        //request.setAttribute("daysalive", days);
         RequestDispatcher disp = request.getRequestDispatcher("result.jsp");
         disp.forward(request, response);
     }
