@@ -47,7 +47,7 @@ public class InputIntegrationTest {
 
 	    return new Object[][]{
 	        //{DesiredCapabilities.firefox()},
-	        //{DesiredCapabilities.chrome()},
+	        {DesiredCapabilities.chrome()},
 	        //{DesiredCapabilities.safari()},	        
 	        //{androidWeb},
 	        //{ipad},
