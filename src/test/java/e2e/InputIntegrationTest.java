@@ -20,6 +20,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.uiautomation.ios.IOSCapabilities;
+import org.uiautomation.ios.communication.device.DeviceVariation;
 
 //mark class as an integration test
 public class InputIntegrationTest {
@@ -41,16 +42,17 @@ public class InputIntegrationTest {
 	    androidWeb.setCapability("version", "");
 	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,false);
 	    
-	    //IOS
+	    //IPAD
 	    IOSCapabilities ipad = IOSCapabilities.ipad("Safari");
 	    ipad.setBrowserName("mobile safari/ipad");
 
+	    
 	    return new Object[][]{
-	        {DesiredCapabilities.firefox()},
-	        {DesiredCapabilities.chrome()},
-	        {DesiredCapabilities.safari()},	        
-	        {androidWeb},
-	        {ipad},
+	    	{DesiredCapabilities.firefox()},
+	    	{DesiredCapabilities.chrome()},
+	    	{DesiredCapabilities.safari()},	        
+	    	{androidWeb},
+	    	{ipad},
 	    };
 	  }
 	
