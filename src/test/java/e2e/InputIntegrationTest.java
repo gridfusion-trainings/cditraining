@@ -81,7 +81,7 @@ public class InputIntegrationTest {
 		driver.get(url);
 
 		try {
-			driver.findElement(By.id("firstname")).sendKeys("Tulip");
+			driver.findElement(By.id("firstname")).sendKeys("Michael");
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
 			driver.findElement(By.id("submitbutton")).click();			
 
