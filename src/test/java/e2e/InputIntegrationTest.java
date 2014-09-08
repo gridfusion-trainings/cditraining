@@ -46,11 +46,11 @@ public class InputIntegrationTest {
 	    ipad.setBrowserName("mobile safari/ipad");
 
 	    return new Object[][]{
-	        //{DesiredCapabilities.firefox()},
+	        {DesiredCapabilities.firefox()},
 	        {DesiredCapabilities.chrome()},
-	        //{DesiredCapabilities.safari()},	        
+	        {DesiredCapabilities.safari()},	        
 	        {androidWeb},
-	        //{ipad},
+	        {ipad},
 	    };
 	  }
 	
