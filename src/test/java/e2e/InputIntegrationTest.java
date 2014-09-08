@@ -39,7 +39,7 @@ public class InputIntegrationTest {
 	    androidWeb.setCapability("platform", "ANDROID");
 	    androidWeb.setCapability("browserName", "android");
 	    androidWeb.setCapability("version", "");
-	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,true);
+	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,false);
 	    
 	    //IOS
 	    IOSCapabilities ipad = IOSCapabilities.ipad("Safari");
@@ -49,7 +49,7 @@ public class InputIntegrationTest {
 	        //{DesiredCapabilities.firefox()},
 	        {DesiredCapabilities.chrome()},
 	        //{DesiredCapabilities.safari()},	        
-	        //{androidWeb},
+	        {androidWeb},
 	        //{ipad},
 	    };
 	  }
