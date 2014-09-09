@@ -40,7 +40,7 @@ public class EndToEndTest {
 	    androidWeb.setCapability("platform", "ANDROID");
 	    androidWeb.setCapability("browserName", "android");
 	    androidWeb.setCapability("version", "");
-	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,false);
+	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,true);
 	    
 	    //IPAD
 	    IOSCapabilities ipad = IOSCapabilities.ipad("Safari");
@@ -51,8 +51,8 @@ public class EndToEndTest {
 	    	{DesiredCapabilities.firefox()},
 	    	{DesiredCapabilities.chrome()},
 	    	//{DesiredCapabilities.safari()},	        
-	    	//{androidWeb},
-	    	//{ipad},
+	    	{androidWeb},
+	    	{ipad},
 	    };
 	  }
 	
