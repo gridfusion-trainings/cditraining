@@ -24,32 +24,4 @@ public class Calculator {
         return fullname.replace(" ", "").length();
     }
 
-
-    public int calculateDaysAlive(String dateInString) throws DateInFutureException, ParseException {
-        SimpleDateFormat dobFormatter = new SimpleDateFormat("yyyy-MM-dd");
-
-        Date today = new Date();
-        Date yourDateOfBirth;
-
-        try {
-            yourDateOfBirth = dobFormatter.parse(dateInString);
-            long diff = today.getTime() - yourDateOfBirth.getTime();
-            long diffDays = diff / (24 * 60 * 60 * 1000);
-
-            //check if dob is in the future
-            if(diffDays < 0) {
-
-                //throw exception because date is in the future
-            	throw new DateInFutureException();
-            }
-            else {
-                return (int)diffDays;
-            }
-        } 
-        finally {
-        }
-
-    }
-
-
 }
