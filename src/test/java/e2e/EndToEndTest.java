@@ -23,13 +23,13 @@ import org.uiautomation.ios.IOSCapabilities;
 import org.uiautomation.ios.communication.device.DeviceVariation;
 
 //mark class as an integration test
-public class InputIntegrationTest {
+public class EndToEndTest {
 	
 	//local remote webdriver
-	//public final String GRIDURL="http://192.168.1.6:4444/wd/hub";
+	public final String GRIDURL="http://192.168.1.6:4444/wd/hub";
 	
 	//Selenium Grid Hub with Android on OSX
-	public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
+	//public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
 
 	
 	@DataProvider(name = "platforms", parallel = true)
@@ -50,16 +50,16 @@ public class InputIntegrationTest {
 	    return new Object[][]{
 	    	{DesiredCapabilities.firefox()},
 	    	{DesiredCapabilities.chrome()},
-	    	{DesiredCapabilities.safari()},	        
-	    	{androidWeb},
-	    	{ipad},
+	    	//{DesiredCapabilities.safari()},	        
+	    	//{androidWeb},
+	    	//{ipad},
 	    };
 	  }
 	
 	
 	public static String URLFactory(String environment) {
 		
-		Map urls = new HashMap();
+		Map<String, String> urls = new HashMap<String, String>();
 		urls.put("QA", "http://192.168.1.6:8080/tmf2");
 		urls.put("PRODUCTION", "http://ec2-54-68-4-210.us-west-2.compute.amazonaws.com:8080/tmf2");	
 		urls.put("VAGRANT", "http://localhost:4568/tmf2/");	
@@ -70,7 +70,7 @@ public class InputIntegrationTest {
 	
 
 	
-	@Test(dataProvider="platforms", groups = {"integration", "production"})
+	@Test(dataProvider="platforms", groups = {"end2end", "production"})
 	public void fillPage(DesiredCapabilities caps) throws InterruptedException, MalformedURLException{
 		
 		
@@ -86,12 +86,10 @@ public class InputIntegrationTest {
 			driver.findElement(By.id("firstname")).sendKeys("Michael");
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
 			driver.findElement(By.id("submitbutton")).click();			
-
 		}
 		finally {
 			Thread.sleep(5000);
 			driver.quit();
-	
 		}
 	}
 }

@@ -97,7 +97,7 @@
 					<groups>${group}</groups>
 					<!-- the next section is new for selecting the enviroment via maven -->
 					<systemPropertyVariables>
-                        <environment>${env.USER}</environment>
+                        <environment>${env}</environment>
                     </systemPropertyVariables>
                     
                     <!-- just testing this for now, in order to not need groups in test itself -->

@@ -9,10 +9,10 @@ import java.util.Date;
  */
 public class Calculator {
 
-    public String calculateName (String first, String last) throws InputIsNullException
+    public String calculateName (String first, String last) throws InputIsEmptyException
     {    	
-    	if(first== null || last==null) {
-    		throw new InputIsNullException();
+    	if(first== "" || last=="") {
+    		throw new InputIsEmptyException();
     	}
     	else {
             return first + " " + last;    		

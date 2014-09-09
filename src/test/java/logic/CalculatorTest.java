@@ -15,21 +15,35 @@ public class CalculatorTest {
 	
 
     @Test(groups = {"unit"})
-    public void shouldReturnFullnameTest() throws InputIsNullException {
+    public void shouldReturnFullnameTest() throws InputIsEmptyException {
 
         Calculator calc = new Calculator();
         Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", "Palotas"));
     }
     
 
-    @Test(groups = {"unit"}, expectedExceptions=InputIsNullException.class)
-    public void shouldThrowInputIsNullException() throws InputIsNullException {
+    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
+    public void shouldThrowInputIsEmptyExceptionBothNames() throws InputIsEmptyException {
 
         Calculator calc = new Calculator();
-        Assert.assertEquals("Michael Palotas", calc.calculateName(null, "Palotas"));
+        Assert.assertEquals("Michael Palotas", calc.calculateName("", ""));
+    } 
+    
+    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
+    public void shouldThrowInputIsEmptyExceptionFirstName() throws InputIsEmptyException {
+
+        Calculator calc = new Calculator();
+        Assert.assertEquals("Michael Palotas", calc.calculateName("", "Palotas"));
     }    
     
+    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
+    public void shouldThrowInputIsEmptyExceptionLastName() throws InputIsEmptyException {
 
+        Calculator calc = new Calculator();
+        Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", ""));
+    }
+    
+    /*
     @Parameters("environment")
     @Test(groups = {"unit"})
     public void shouldReturnLengthOfNameTest(String environment) {
@@ -48,5 +62,5 @@ public class CalculatorTest {
     	Calculator calc = new Calculator();
     	calc.calculateDaysAlive("2099-12-31");
     }
-
+*/
 }

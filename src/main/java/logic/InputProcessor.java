@@ -28,7 +28,7 @@ public class InputProcessor extends HttpServlet {
 		try {
 			fullname = calc.calculateName(first, last);
 	        length = calc.calculateNumberOfChars(fullname);
-		} catch (InputIsNullException e) {
+		} catch (InputIsEmptyException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
