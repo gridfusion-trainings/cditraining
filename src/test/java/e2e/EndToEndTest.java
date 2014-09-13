@@ -26,10 +26,10 @@ import org.uiautomation.ios.communication.device.DeviceVariation;
 public class EndToEndTest {
 	
 	//local remote webdriver
-	public final String GRIDURL="http://192.168.1.6:4444/wd/hub";
+	//public final String GRIDURL="http://192.168.1.6:4444/wd/hub";
 	
 	//Selenium Grid Hub with Android on OSX
-	//public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
+	public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
 
 	
 	@DataProvider(name = "platforms", parallel = true)
