@@ -15,7 +15,7 @@ public class SimpleSeleniumTest {
 	@Test
 	public void simpleSeleniumTest() throws MalformedURLException, InterruptedException {
 		DesiredCapabilities caps=new DesiredCapabilities();
-		caps.setBrowserName("firefox");
+		caps.setBrowserName("chrome");
 		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps);
 		
 		driver.get("http://localhost:8080/tmf2");

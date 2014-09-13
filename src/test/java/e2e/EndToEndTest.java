@@ -26,10 +26,10 @@ import org.uiautomation.ios.communication.device.DeviceVariation;
 public class EndToEndTest {
 	
 	//local remote webdriver
-	//public final String GRIDURL="http://192.168.1.6:4444/wd/hub";
+	public final String GRIDURL="http://192.168.1.6:4444/wd/hub";
 	
 	//Selenium Grid Hub with Android on OSX
-	public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
+	//public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
 
 	
 	@DataProvider(name = "platforms", parallel = true)
@@ -51,8 +51,8 @@ public class EndToEndTest {
 	    	{DesiredCapabilities.firefox()},
 	    	{DesiredCapabilities.chrome()},
 	    	//{DesiredCapabilities.safari()},	        
-	    	{androidWeb},
-	    	{ipad},
+	    	//{androidWeb},
+	    	//{ipad},
 	    };
 	  }
 	
@@ -62,7 +62,7 @@ public class EndToEndTest {
 		Map<String, String> urls = new HashMap<String, String>();
 		urls.put("QA", "http://192.168.1.6:8080/tmf2");
 		urls.put("PRODUCTION", "http://ec2-54-68-4-210.us-west-2.compute.amazonaws.com:8080/tmf2");	
-		urls.put("VAGRANT", "http://localhost:4568/tmf2/");	
+		urls.put("VAGRANT", "http://192.168.1.150:8080/tmf2/");	
 		
 		String url = (String) urls.get(environment);
 		return url;
