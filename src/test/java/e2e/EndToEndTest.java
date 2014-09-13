@@ -48,9 +48,9 @@ public class EndToEndTest {
 
 	    
 	    return new Object[][]{
-	    	//{DesiredCapabilities.firefox()},
-	    	//{DesiredCapabilities.chrome()},
-	    	//{DesiredCapabilities.safari()},	        
+	    	{DesiredCapabilities.firefox()},
+	    	{DesiredCapabilities.chrome()},
+	    	{DesiredCapabilities.safari()},	        
 	    	{androidWeb},
 	    	{ipad},
 	    };
