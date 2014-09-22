@@ -32,7 +32,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">GRIDFUSION 123</a>
+                    <a class="navbar-brand">GRIDFUSION</a>
                 </div>
 
                 <div class="navbar-collapse collapse">
