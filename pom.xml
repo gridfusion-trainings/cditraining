@@ -108,7 +108,9 @@
                 </configuration>                
              </plugin>      
    </plugins> 
+      
    <finalName>tmf2-${project.version}-${BUILD_ID}</finalName>
+ 
   </build>
   
   
