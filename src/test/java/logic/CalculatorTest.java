@@ -1,11 +1,7 @@
 package logic;
 
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -43,3 +39,6 @@ public class CalculatorTest {
         Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", ""));
     }
 }
+
+
+
