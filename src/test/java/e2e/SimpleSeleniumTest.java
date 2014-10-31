@@ -22,6 +22,11 @@ public class SimpleSeleniumTest {
 		
 		WebElement firstname=driver.findElement(By.id("firstname"));
 		firstname.sendKeys("Michael");
+		WebElement lastname=driver.findElement(By.id("lastname"));
+		lastname.sendKeys("Palotas");
+		
+		driver.findElement(By.id("submitbutton")).click();
+		
 		
 		Thread.sleep(5000);
 		driver.quit();
