@@ -60,7 +60,7 @@ public class EndToEndTest {
 	public static String URLFactory(String environment) {
 		
 		Map<String, String> urls = new HashMap<String, String>();
-		urls.put("QA", "http://192.168.1.6:8080/tmf2");
+		urls.put("QA", "http://192.168.1.6:8080/tmf3");
 		urls.put("PRODUCTION", "http://ec2-54-68-17-140.us-west-2.compute.amazonaws.com:8080/tmf3");	
 		urls.put("VAGRANT", "http://192.168.1.150:8080/tmf2/");	
 		
