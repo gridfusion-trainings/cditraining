@@ -85,7 +85,8 @@ public class EndToEndTest {
 		try {
 			driver.findElement(By.id("firstname")).sendKeys("Michael");
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
-			driver.findElement(By.id("submitbutton")).click();			
+			driver.findElement(By.id("submitbutton")).click();	
+			Assert.assertEquals(driver.getTitle(), "LGT Training Result");
 		}
 		finally {
 			Thread.sleep(5000);
