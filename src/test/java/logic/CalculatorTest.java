@@ -38,6 +38,12 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", ""));
     }
+    
+    @Test(groups = {"unit"})
+    public void failingTest() {
+
+      Assert.assertTrue(false);
+    }
 }
 
 
