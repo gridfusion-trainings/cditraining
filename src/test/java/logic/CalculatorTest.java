@@ -39,11 +39,6 @@ public class CalculatorTest {
         Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", ""));
     }
     
-    @Test(groups = {"unit"})
-    public void failingTest() {
-
-      Assert.assertTrue(false);
-    }
 }
 
 
