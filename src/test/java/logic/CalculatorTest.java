@@ -14,7 +14,7 @@ public class CalculatorTest {
     public void shouldReturnFullnameTest() throws InputIsEmptyException {
 
         Calculator calc = new Calculator();
-        Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", "Palotas"));
+        Assert.assertEquals(calc.calculateName("Michael", "Palotas"), "Michael Palotas");
     }
     
 
