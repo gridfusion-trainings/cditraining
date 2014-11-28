@@ -26,7 +26,7 @@ import org.uiautomation.ios.communication.device.DeviceVariation;
 public class EndToEndTest {
 	
 	//local remote webdriver
-	public final String GRIDURL="http://192.168.1.6:4444/wd/hub";
+	public final String GRIDURL="http://localhost:4444/wd/hub";
 	
 	//Selenium Grid Hub with Android on OSX
 	//public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
@@ -60,7 +60,7 @@ public class EndToEndTest {
 	public static String URLFactory(String environment) {
 		
 		Map<String, String> urls = new HashMap<String, String>();
-		urls.put("QA", "http://192.168.1.6:8080/tmf3");
+		urls.put("QA", "http://localhost:8080/tmf3");
 		urls.put("PRODUCTION", "http://ec2-54-68-17-140.us-west-2.compute.amazonaws.com:8080/tmf3");	
 		urls.put("VAGRANT", "http://192.168.1.150:8080/tmf2/");	
 		
