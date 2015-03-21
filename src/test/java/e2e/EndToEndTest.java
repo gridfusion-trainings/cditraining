@@ -49,7 +49,7 @@ public class EndToEndTest {
 	    
 	    return new Object[][]{
 	    	{DesiredCapabilities.firefox()},
-	    	{DesiredCapabilities.chrome()},
+	    	//{DesiredCapabilities.chrome()},
 	    	//{DesiredCapabilities.safari()},	        
 	    	//{androidWeb},
 	    	//{ipad},
@@ -61,7 +61,7 @@ public class EndToEndTest {
 		
 		Map<String, String> urls = new HashMap<String, String>();
 		urls.put("QA", "http://localhost:8080/tmf3");
-		urls.put("PRODUCTION", "http://ec2-54-68-17-140.us-west-2.compute.amazonaws.com:8080/tmf3");	
+		urls.put("PRODUCTION", "http://ec2-52-11-222-143.us-west-2.compute.amazonaws.com:8080/tmf3");
 		urls.put("VAGRANT", "http://192.168.1.150:8080/tmf2/");	
 		
 		String url = (String) urls.get(environment);
