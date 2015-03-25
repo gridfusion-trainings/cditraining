@@ -21,7 +21,6 @@ public class InputProcessor extends HttpServlet {
         String first = request.getParameter("firstname");
         String last = request.getParameter("lastname");
         int length=0;
-        //String dob = request.getParameter("dateofbirth");
 
         Calculator calc = new Calculator();
         String fullname=null;
@@ -33,20 +32,9 @@ public class InputProcessor extends HttpServlet {
 			e.printStackTrace();
 		}
         int days=0;
-        
-        /*
-		try {
-			days = calc.calculateDaysAlive(dob);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		*/
 
         request.setAttribute("fullname", fullname);
         request.setAttribute("length", length); 
-        //request.setAttribute("dob", dob);
-        //request.setAttribute("daysalive", days);
         RequestDispatcher disp = request.getRequestDispatcher("result.jsp");
         disp.forward(request, response);
     }

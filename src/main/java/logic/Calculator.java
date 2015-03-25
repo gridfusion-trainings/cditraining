@@ -23,5 +23,4 @@ public class Calculator {
 
         return fullname.replace(" ", "").length();
     }
-
 }

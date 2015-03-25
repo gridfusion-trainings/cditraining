@@ -1,11 +1,7 @@
 package logic;
 
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -18,7 +14,7 @@ public class CalculatorTest {
     public void shouldReturnFullnameTest() throws InputIsEmptyException {
 
         Calculator calc = new Calculator();
-        Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", "Palotas"));
+        Assert.assertEquals(calc.calculateName("Michael", "Palotas"), "Michael Palotas");
     }
     
 
@@ -42,4 +38,8 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", ""));
     }
+    
 }
+
+
+
