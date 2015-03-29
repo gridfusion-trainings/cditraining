@@ -1,7 +1,6 @@
 package e2e;
 
 
-import io.selendroid.SelendroidCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -19,8 +18,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.uiautomation.ios.IOSCapabilities;
-import org.uiautomation.ios.communication.device.DeviceVariation;
 
 //mark class as an integration test
 public class EndToEndTest {
@@ -34,18 +31,6 @@ public class EndToEndTest {
 	
 	@DataProvider(name = "platforms", parallel = true)
 	  public Object[][] getCapabilities() {
-
-		//Android
-	    DesiredCapabilities androidWeb = new DesiredCapabilities();
-	    androidWeb.setCapability("platform", "ANDROID");
-	    androidWeb.setCapability("browserName", "android");
-	    androidWeb.setCapability("version", "");
-	    androidWeb.setCapability(SelendroidCapabilities.EMULATOR,false);
-	    
-	    //IPAD
-	    IOSCapabilities ipad = IOSCapabilities.ipad("Safari");
-	    ipad.setBrowserName("mobile safari/ipad");
-
 	    
 	    return new Object[][]{
 	    	{DesiredCapabilities.firefox()},
