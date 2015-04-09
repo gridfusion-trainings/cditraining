@@ -18,7 +18,7 @@ public class SimpleSeleniumTest {
 		caps.setBrowserName("firefox");
 		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), caps);
 		
-		driver.get("http://localhost:8080/tmf2");
+		driver.get("http://localhost:8080/tmf3");
 		
 		WebElement firstname=driver.findElement(By.id("firstname"));
 		firstname.sendKeys("Michael");
