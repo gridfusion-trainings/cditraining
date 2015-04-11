@@ -1,0 +1,9 @@
+.classpath
+.project
+.settings/
+sonar-project.properties
+sonar-project.properties~
+test-output/
+
+
+/target/
