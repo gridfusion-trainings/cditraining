@@ -1,14 +1,9 @@
 package unit;
 
-import java.util.List;
-
-import logic.Calculator;
 import logic.InputStripper;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static org.mockito.Mockito.*;
 
 
 public class StripperTest {
