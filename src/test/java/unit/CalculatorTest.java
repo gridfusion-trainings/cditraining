@@ -1,21 +1,59 @@
-package logic;
+package unit;
 
+
+import static org.mockito.Mockito.*;
+import logic.Calculator;
+import logic.InputIsEmptyException;
+import logic.InputStripper;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-/**
- * Created by mpalotas on 18/03/14.
- */
+
 public class CalculatorTest {
 	
+	
+	@Test(groups="unit")
+	public void shouldRemoveSingleWhitespaceInName() {
 
+		InputStripper mockedStripper = mock(InputStripper.class);
+
+		// stubbing appears before the actual execution
+		when(mockedStripper.stripWhitespaces("Michael Palotas")).thenReturn("MichaelPalotas");
+		
+		
+		Calculator calc = new Calculator();
+		calc.setStripper(mockedStripper);
+		
+		Assert.assertEquals(calc.calculateNumberOfChars("Michael Palotas"), 14);		
+		
+	}
+	
+
+	@Test(groups="unit")
+	public void shouldRemoveMultipleWhitespaceInName() {
+
+		InputStripper mockedStripper = mock(InputStripper.class);
+
+		// stubbing appears before the actual execution
+		when(mockedStripper.stripWhitespaces("Mi ch ael    Palo tas")).thenReturn("MichaelPalotas");
+		
+		
+		Calculator calc = new Calculator();
+		calc.setStripper(mockedStripper);
+		
+		Assert.assertEquals(calc.calculateNumberOfChars("Mi ch ael    Palo tas"), 14);		
+		
+	}
+	
+    
     @Test(groups = {"unit"})
-    public void shouldReturnFullnameTest() throws InputIsEmptyException {
+    public void shouldReturnFullname() throws InputIsEmptyException {
 
         Calculator calc = new Calculator();
         Assert.assertEquals(calc.calculateName("Michael", "Palotas"), "Michael Palotas");
     }
+
     
 
     @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
