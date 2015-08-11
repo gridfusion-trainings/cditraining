@@ -1,6 +1,6 @@
 package unit;
 
-import logic.InputStripper;
+import logic.InputProcessor;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +14,7 @@ public class StripperTest {
 	@Test(groups="unit")
 	public void shouldRemoveWhitespacesInName() {
 		
-		InputStripper stripper = new InputStripper();
+		InputProcessor stripper = new InputProcessor();
 		Assert.assertEquals(stripper.stripWhitespaces("Michael Palotas"), "MichaelPalotas");
 	}
 
@@ -22,7 +22,7 @@ public class StripperTest {
 	@Test(groups="unit")
 	public void shouldRemoveMultipleWhitespacesInName() {
 		
-		InputStripper stripper = new InputStripper();
+		InputProcessor stripper = new InputProcessor();
 		Assert.assertEquals(stripper.stripWhitespaces("Mi ch ael Pal o tas "), "MichaelPalotas");
 	}
 	

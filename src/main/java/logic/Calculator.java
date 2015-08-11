@@ -1,18 +1,20 @@
 package logic;
 
 
-/**
- * Created by mpalotas on 18/03/14.
- */
 public class Calculator {
 	
-	private InputStripper stripper;
+	private InputProcessor processor;
 
 
 	public Calculator() {
-		// TODO Auto-generated constructor stub
-		this.stripper = new InputStripper();
+		//set default InputProcessor in case no mocking is needed
+		this.processor = new InputProcessor();
 	}
+	
+    //required for unit tests and mocking
+    public void setStripper(InputProcessor stripper) {
+    	this.processor = stripper;
+    }
 
 	public String calculateName (String first, String last) throws InputIsEmptyException
     {    	
@@ -28,12 +30,8 @@ public class Calculator {
     	
     	String strippedString;
     	
-    	strippedString = stripper.stripWhitespaces(fullName);
+    	//call to (external) InputProcessor class 
+    	strippedString = processor.stripWhitespaces(fullName);
         return strippedString.length();
-    }
-    
-    
-    public void setStripper(InputStripper stripper) {
-    	this.stripper = stripper;
     }
 }

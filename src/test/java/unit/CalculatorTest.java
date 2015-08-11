@@ -4,7 +4,7 @@ package unit;
 import static org.mockito.Mockito.*;
 import logic.Calculator;
 import logic.InputIsEmptyException;
-import logic.InputStripper;
+import logic.InputProcessor;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,7 +16,7 @@ public class CalculatorTest {
 	@Test(groups="unit")
 	public void shouldRemoveSingleWhitespaceInName() {
 
-		InputStripper mockedStripper = mock(InputStripper.class);
+		InputProcessor mockedStripper = mock(InputProcessor.class);
 
 		// stubbing appears before the actual execution
 		when(mockedStripper.stripWhitespaces("Michael Palotas")).thenReturn("MichaelPalotas");
@@ -33,7 +33,7 @@ public class CalculatorTest {
 	@Test(groups="unit")
 	public void shouldRemoveMultipleWhitespaceInName() {
 
-		InputStripper mockedStripper = mock(InputStripper.class);
+		InputProcessor mockedStripper = mock(InputProcessor.class);
 
 		// stubbing appears before the actual execution
 		when(mockedStripper.stripWhitespaces("Mi ch ael    Palo tas")).thenReturn("MichaelPalotas");
