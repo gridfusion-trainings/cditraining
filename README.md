@@ -16,7 +16,7 @@ mvn clean test cobertura:cobertura -Dgroup=unit
 
 ### SONAR
 cd /home/gridfusion/SeleniumTraining/sonar-3.7.4/bin/linux-x86-32 </br>
-./sonar start
+./sonar start </br>
 mvn clean test -Dgroup=unit sonar:sonar 
 
 
