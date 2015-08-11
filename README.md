@@ -9,7 +9,7 @@ E2E tests: mvn test -Dgroup=end2end </br>
 mvn test -Dgroup=end2end -Denv=QA / PRODUCTION / VAGRANT
 
 ### Cobertura code coverage
-mvn clean test cobertura:cobertura -Dgroup=unit,integration
+mvn clean test cobertura:cobertura -Dgroup=unit,integration (--> this will run both groups of tests)
 
 ### SONAR
 cd /home/gridfusion/SeleniumTraining/sonar-3.7.4/bin/linux-x86-32 </br>
