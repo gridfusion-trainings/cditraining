@@ -16,14 +16,14 @@ public class CalculatorTest {
 	@Test(groups="unit")
 	public void shouldRemoveSingleWhitespaceInName() {
 
-		InputProcessor mockedStripper = mock(InputProcessor.class);
+		InputProcessor mockedInputProcessor = mock(InputProcessor.class);
 
 		// stubbing appears before the actual execution
-		when(mockedStripper.stripWhitespaces("Michael Palotas")).thenReturn("MichaelPalotas");
+		when(mockedInputProcessor.stripWhitespaces("Michael Palotas")).thenReturn("MichaelPalotas");
 		
 		
 		Calculator calc = new Calculator();
-		calc.setInputProcessor(mockedStripper);
+		calc.setInputProcessor(mockedInputProcessor);
 		
 		Assert.assertEquals(calc.calculateNumberOfChars("Michael Palotas"), 14);		
 		
@@ -33,14 +33,14 @@ public class CalculatorTest {
 	@Test(groups="unit")
 	public void shouldRemoveMultipleWhitespaceInName() {
 
-		InputProcessor mockedStripper = mock(InputProcessor.class);
+		InputProcessor mockedInputProcessor = mock(InputProcessor.class);
 
 		// stubbing appears before the actual execution
-		when(mockedStripper.stripWhitespaces("Mi ch ael    Palo tas")).thenReturn("MichaelPalotas");
+		when(mockedInputProcessor.stripWhitespaces("Mi ch ael    Palo tas")).thenReturn("MichaelPalotas");
 		
 		
 		Calculator calc = new Calculator();
-		calc.setInputProcessor(mockedStripper);
+		calc.setInputProcessor(mockedInputProcessor);
 		
 		Assert.assertEquals(calc.calculateNumberOfChars("Mi ch ael    Palo tas"), 14);		
 		
