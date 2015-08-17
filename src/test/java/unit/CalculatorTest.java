@@ -23,7 +23,7 @@ public class CalculatorTest {
 		
 		
 		Calculator calc = new Calculator();
-		calc.setStripper(mockedStripper);
+		calc.setInputProcessor(mockedStripper);
 		
 		Assert.assertEquals(calc.calculateNumberOfChars("Michael Palotas"), 14);		
 		
@@ -40,7 +40,7 @@ public class CalculatorTest {
 		
 		
 		Calculator calc = new Calculator();
-		calc.setStripper(mockedStripper);
+		calc.setInputProcessor(mockedStripper);
 		
 		Assert.assertEquals(calc.calculateNumberOfChars("Mi ch ael    Palo tas"), 14);		
 		

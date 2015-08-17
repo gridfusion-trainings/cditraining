@@ -13,7 +13,7 @@ mvn clean test cobertura:cobertura -Dgroup=unit,integration (--> this will run b
 
 ### SONAR
 cd /home/gridfusion/SeleniumTraining/sonar-3.7.4/bin/linux-x86-32 </br>
-./sonar start </br>
+./sonar.sh start </br>
 mvn clean test -Dgroup=unit sonar:sonar </br>
 
 

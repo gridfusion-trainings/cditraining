@@ -11,11 +11,16 @@ public class Calculator {
 		this.processor = new InputProcessor();
 	}
 	
-    //required for unit tests and mocking
-    public void setStripper(InputProcessor stripper) {
+
+    public void setInputProcessor(InputProcessor stripper) {
     	this.processor = stripper;
     }
 
+    /** 
+     * required for unit tests and mocking
+     * @param  stripper  the InputProcessor of choice  
+     * @return none
+     */    
 	public String calculateName (String first, String last) throws InputIsEmptyException
     {    	
     	if(first== "" || last=="") {
@@ -26,7 +31,12 @@ public class Calculator {
     	}
     }
 
-    public int calculateNumberOfChars(String fullName) {
+    /** 
+     * required for unit tests and mocking
+     * @param  stripper  the InputProcessor of choice  
+     * @return none
+     */ 
+	public int calculateNumberOfChars(String fullName) {
     	
     	String strippedString;
     	
