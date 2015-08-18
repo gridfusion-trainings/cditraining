@@ -8,7 +8,7 @@
 *.jar
 *.war
 *.ear
-*.idea
+
 *.iml
 
 # Compiled source #
@@ -24,5 +24,6 @@
 #############
 **/test-output
 **/target
+**/.idea
 
 /target/
