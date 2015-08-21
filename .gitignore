@@ -1,9 +1,29 @@
-.classpath
-.project
-.settings/
-sonar-project.properties
-sonar-project.properties~
-test-output/
+*.class
+*.classpath
+*.project
+*.settings
+**/bin
+*.idea
+# Package Files #
+*.jar
+*.war
+*.ear
 
+*.iml
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+#directories#
+#############
+**/test-output
+**/target
+.idea/
 
 /target/
