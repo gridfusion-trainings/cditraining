@@ -6,12 +6,12 @@
   <display-name>Archetype Created Web Application</display-name>
 
     <servlet>
-        <servlet-name>InputProcessor</servlet-name>
-        <servlet-class>logic.InputProcessor</servlet-class>
+        <servlet-name>MainProcessor</servlet-name>
+        <servlet-class>logic.MainProcessor</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>InputProcessor</servlet-name>
+        <servlet-name>MainProcessor</servlet-name>
         <url-pattern>/process.do</url-pattern>
     </servlet-mapping>
 
