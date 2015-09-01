@@ -27,7 +27,7 @@ public class Calculator {
     		throw new InputIsEmptyException();
     	}
     	else {
-            return first + " " + last + "bug";    		
+            return first + " " + last;    		
     	}
     }
 
