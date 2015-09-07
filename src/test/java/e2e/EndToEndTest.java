@@ -42,7 +42,7 @@ public class EndToEndTest {
 		
 		Map<String, String> urls = new HashMap<String, String>();
 		urls.put("QA", "http://localhost:8080/tmf3");
-		urls.put("PRODUCTION", "http://ec2-54-68-233-4.us-west-2.compute.amazonaws.com:2808/tmf3");
+		urls.put("PRODUCTION", "http://ec2-54-68-233-4.us-west-2.compute.amazonaws.com:8080/tmf3");
 		urls.put("VAGRANT", "http://192.168.1.150:8080/tmf2/");	
 		
 		String url = (String) urls.get(environment);
@@ -67,7 +67,7 @@ public class EndToEndTest {
 			driver.findElement(By.id("firstname")).sendKeys("Michael");
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
 			driver.findElement(By.id("submitbutton")).click();	
-			Assert.assertEquals(driver.getTitle(), "LGT Training Result");
+			Assert.assertEquals(driver.getTitle(), "Digicomp Result");
 		}
 		finally {
 			Thread.sleep(5000);
