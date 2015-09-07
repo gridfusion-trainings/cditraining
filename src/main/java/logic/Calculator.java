@@ -12,8 +12,8 @@ public class Calculator {
 	}
 	
 
-    public void setInputProcessor(InputProcessor stripper) {
-    	this.processor = stripper;
+    public void setInputProcessor(InputProcessor strp) {
+    	this.processor = strp;
     }
 
     /** 
@@ -27,7 +27,7 @@ public class Calculator {
     		throw new InputIsEmptyException();
     	}
     	else {
-            return first + " " + last + "bug";    		
+            return first + " " + last;    		
     	}
     }
 
