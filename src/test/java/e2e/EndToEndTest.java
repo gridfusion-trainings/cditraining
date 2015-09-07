@@ -30,7 +30,7 @@ public class EndToEndTest {
 	    
 	    return new Object[][]{
 	    	{DesiredCapabilities.firefox()},
-	    	{DesiredCapabilities.chrome()},
+	    	//{DesiredCapabilities.chrome()},
 	    	//{DesiredCapabilities.safari()},	        
 	    	//{androidWeb},
 	    	//{ipad},
