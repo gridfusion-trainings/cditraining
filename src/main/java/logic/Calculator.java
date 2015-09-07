@@ -27,7 +27,7 @@ public class Calculator {
     		throw new InputIsEmptyException();
     	}
     	else {
-            return first + " " + last + "adding bug which will be caught by unit tests";    		
+            return first + " " + last;    		
     	}
     }
 
