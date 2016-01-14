@@ -35,4 +35,6 @@ berks install : run it from above directory to install the local cookbooks in .b
 
 berks upload –force : run to upload cookbooks from .berkshelf to chef server
 
+## DOCKER
+Docker networking help: https://docs.docker.com/engine/installation/mac/#container-port-redirection
 
