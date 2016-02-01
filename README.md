@@ -31,6 +31,8 @@ ssh -i ~/Desktop/gridfusion.pem ubuntu@ec2-54-68-233-4.us-west-2.compute.amazona
 ### Location of self created chef cookbooks
 /Users/gridfusion/Desktop/programming/chef-repo/cookbooks/
 
+Tomcat cookbook is in ~/.berkshelf. To change i.e. the port from 2808 to something else edit the default.rb in /Users/gridfusion/.berkshelf/cookbooks/tomcat-0.17.3/attributes
+
 berks install : run it from above directory to install the local cookbooks in .berkshelf directory
 
 berks upload –force : run to upload cookbooks from .berkshelf to chef server
