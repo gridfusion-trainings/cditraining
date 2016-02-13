@@ -20,7 +20,7 @@ mvn clean test -Dgroup=unit sonar:sonar </br>
 knife ec2 server create  -I ami-7d8bdb4d -f t1.micro --ssh-user ubuntu  --identity-file ~/Desktop/gridfusion.pem --region us-west-2
 
 ### start EC2 instance with Chef / Chef Server
-knife ec2 server create  -I ami-7d8bdb4d -f t1.micro --ssh-user ubuntu  --identity-file ~/Desktop/gridfusion.pem --region us-west-2 -r "role[cdi_tomcat_aws]
+knife ec2 server create  -I ami-7d8bdb4d -f t1.micro --ssh-user ubuntu  --identity-file ~/Desktop/gridfusion.pem --region us-west-2 -r "role[cdi_tomcat_aws]"
 
 ### Chef Server Web
 https://manage.chef.io/login
@@ -30,6 +30,8 @@ ssh -i ~/Desktop/gridfusion.pem ubuntu@ec2-54-68-233-4.us-west-2.compute.amazona
 
 ### Location of self created chef cookbooks
 /Users/gridfusion/Desktop/programming/chef-repo/cookbooks/
+
+Tomcat cookbook is in ~/.berkshelf. To change i.e. the port from 2808 to something else edit the default.rb in /Users/gridfusion/.berkshelf/cookbooks/tomcat-0.17.3/attributes
 
 berks install : run it from above directory to install the local cookbooks in .berkshelf directory
 
