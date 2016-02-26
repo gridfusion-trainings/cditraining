@@ -11,6 +11,11 @@ import org.testng.annotations.Test;
 
 
 public class CalculatorTest {
+
+	@Test(groups="unit")
+	public void falseTest() {
+		Assert.assertTrue(true);
+	}
 	
 	
 	@Test(groups="unit")
