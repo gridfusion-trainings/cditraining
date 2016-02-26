@@ -4,11 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
     <title>samstag</title>
-=======
-    <title>Feierabend</title>
->>>>>>> 147ee2d7e0556a4deb98d4e5be6ce9dc01e174ad
+
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
