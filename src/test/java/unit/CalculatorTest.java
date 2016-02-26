@@ -84,7 +84,12 @@ public class CalculatorTest {
         Calculator calc = new Calculator();
         Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", ""));
     }
-    
+
+    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
+    public void failedTest() throws InputIsEmptyException {
+
+        Assert.assertTrue(false);
+    }
 }
 
 
