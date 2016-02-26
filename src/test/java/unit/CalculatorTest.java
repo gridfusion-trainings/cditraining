@@ -88,7 +88,7 @@ public class CalculatorTest {
     @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
     public void failedTest() throws InputIsEmptyException {
 
-        Assert.assertTrue(false);
+        Assert.assertTrue(true);
     }
 }
 
