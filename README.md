@@ -51,7 +51,11 @@ Run interactive container: docker run ubuntu /bin/echo 'Hello world'
 
 ## Docker run container as a daemon 
 docker run -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done" <br>
-Look at logs: docker logs "containername"
+Look at logs: docker logs "containername" <br>
+
+## Port mapping 
+0.0.0.0:49155->5000/tcp : means that container port 5000 is mapped to VM/Host port 49155 <br>
+docker run -d -p 80:5000 training/webapp python app.py : maps container port 5000 to port 80 on VM / Host 
 
 
 
