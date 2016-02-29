@@ -78,8 +78,17 @@ Commit the changes: `$ docker commit -m "Added json gem" -a "Kate Smith" 0b2616b
 
 When running `docker images` you should see the `palotas/sinatra:v2` image
 
-Run the new image: `$ docker run -t -i ouruser/sinatra:v2 /bin/bash`
+Run the new image: `$ docker run -t -i palotas/sinatra:v2 /bin/bash`
 
+## Create new image with DOCKERFILE
+    # This is a comment
+    FROM ubuntu:14.04
+    MAINTAINER Michael Palotas <michael.palotas@gridfusion.net>  
+    RUN apt-get update && apt-get install -y ruby ruby-dev
+    RUN gem install sinatra
+    RUN apt-get install -y wget
+    
+Build new docker image: `$ docker build -t palotas/sinatra:v2 .`
 
 
 
