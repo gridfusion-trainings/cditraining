@@ -91,8 +91,9 @@ Run the new image: `$ docker run -t -i palotas/sinatra:v2 /bin/bash`
 Build new docker image: `$ docker build -t palotas/sinatra:v2 .`
 
 ##Push new docker image to docker hub
-    make sure you are logged in: `docker login`
-    `$ docker push palotas/sinatra`
+make sure you are logged in: `docker login`
+
+`$ docker push palotas/sinatra`
 
 
 
