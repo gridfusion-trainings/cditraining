@@ -40,9 +40,20 @@ berks upload –force : run to upload cookbooks from .berkshelf to chef server
 ## DOCKER
 Docker networking help: https://docs.docker.com/engine/installation/mac/#container-port-redirection <br>
 Show running docker containers: docker ps <br>
+Show details of LAST container started: docker ps -l <br>
 Show IP / Port mapping of container: docker port stupefied_brattain <br>
 Show IP address of the VM: docker-machine ip default <br>
 Run container and expose port 8080: docker run -itP --expose 8080 tomcat:8.0 <br>
 Open shell for container: docker exec -i -t <container id> bash <br>
+
+## Docker Ubuntu 
+Run interactive container: docker run ubuntu /bin/echo 'Hello world'
+
+## Docker run container as a daemon 
+docker run -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done" <br>
+Look at logs: docker logs "containername"
+
+
+
 
 
