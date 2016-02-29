@@ -68,11 +68,16 @@ Look at logs: `docker logs "containername"` <br>
 
 ## Creating your own image
 Pulling a new image: `$ docker pull training/sinatra`
+
 Run in interactive mode: `$ docker run -t -i training/sinatra /bin/bash`
 **Take note of the container ID at this point. You will need it later for the commit**
+
 Edit the image: `root@0b2616b0e5a8:/# gem install json`
+
 Commit the changes: `$ docker commit -m "Added json gem" -a "Kate Smith" 0b2616b0e5a8 palotas/sinatra:v2`
+
 When running `docker images` you should see the `palotas/sinatra:v2` image
+
 Run the new image: `$ docker run -t -i ouruser/sinatra:v2 /bin/bash`
 
 
