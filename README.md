@@ -55,7 +55,7 @@ Look at logs: `docker logs "containername"` <br>
 
 ## Port mapping 
 `0.0.0.0:49155->5000/tcp` : means that container port 5000 is mapped to VM/Host port 49155 <br>
-`docker run -d -p 80:5000 training/webapp python app.py` : maps container port 5000 to port 80 on VM / Host <br> 
+`docker run -d -p 80:5000 training/webapp python app.py` maps container port 5000 to port 80 on VM / Host <br> 
 `docker port nostalgic_morse 5000` shows what port 5000 is mapped to publicly 
 
 
