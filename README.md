@@ -58,6 +58,10 @@ Look at logs: `docker logs "containername"` <br>
 `docker run -d -p 80:5000 training/webapp python app.py` maps container port 5000 to port 80 on VM / Host <br> 
 `docker port nostalgic_morse 5000` shows what port 5000 is mapped to publicly 
 
+Inspect docker container `$ docker inspect nostalgic_morse`
+Remove docker containes: `$ docker rm nostalgic_morse`
+Search for docker images: `gridfusion@ubuntu:~$ docker search selenium`
+
 
 
 
