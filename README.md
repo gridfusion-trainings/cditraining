@@ -54,12 +54,16 @@ Run interactive container: `docker run ubuntu /bin/echo 'Hello world'`
 Look at logs: `docker logs "containername"` <br>
 
 ## Port mapping 
-`0.0.0.0:49155->5000/tcp` : means that container port 5000 is mapped to VM/Host port 49155 <br>
-`docker run -d -p 80:5000 training/webapp python app.py` maps container port 5000 to port 80 on VM / Host <br> 
+`0.0.0.0:49155->5000/tcp` : means that container port 5000 is mapped to VM/Host port 49155
+
+`docker run -d -p 80:5000 training/webapp python app.py` maps container port 5000 to port 80 on VM / Host 
+
 `docker port nostalgic_morse 5000` shows what port 5000 is mapped to publicly 
 
 `$ docker inspect nostalgic_morse` Inspect docker container 
-`$ docker rm nostalgic_morse` Remove docker containes: 
+
+`$ docker rm nostalgic_morse` Remove docker containes
+
 `gridfusion@ubuntu:~$ docker search selenium` Search for docker images
 
 
