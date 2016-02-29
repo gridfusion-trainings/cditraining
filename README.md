@@ -47,16 +47,16 @@ Run container and expose port 8080: docker run -itP --expose 8080 tomcat:8.0 <br
 Open shell for container: docker exec -i -t <container id> bash <br>
 
 ## Docker Ubuntu 
-Run interactive container: docker run ubuntu /bin/echo 'Hello world'
+Run interactive container: `docker run ubuntu /bin/echo 'Hello world'`
 
 ## Docker run container as a daemon 
-docker run -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done" <br>
-Look at logs: docker logs "containername" <br>
+`docker run -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done" <br>`
+Look at logs: `docker logs "containername"` <br>
 
 ## Port mapping 
-0.0.0.0:49155->5000/tcp : means that container port 5000 is mapped to VM/Host port 49155 <br>
-docker run -d -p 80:5000 training/webapp python app.py : maps container port 5000 to port 80 on VM / Host 
-'docker port nostalgic_morse 5000' : shows what port 5000 is mapped to publicly 
+`0.0.0.0:49155->5000/tcp` : means that container port 5000 is mapped to VM/Host port 49155 <br>
+`docker run -d -p 80:5000 training/webapp python app.py` : maps container port 5000 to port 80 on VM / Host <br> 
+`docker port nostalgic_morse 5000` shows what port 5000 is mapped to publicly 
 
 
 
