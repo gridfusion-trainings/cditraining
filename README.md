@@ -92,6 +92,7 @@ Build new docker image: `$ docker build -t palotas/sinatra:v2 .`
 
 Push new docker image to docker hub:
 1) make sure you are logged in: `docker login`
+
 2) `$ docker push ouruser/sinatra`
 
 
