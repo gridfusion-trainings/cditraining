@@ -66,7 +66,8 @@ public class EndToEndTest {
 		try {
 			driver.findElement(By.id("firstname")).sendKeys("Michael");
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
-			driver.findElement(By.id("submitbutton")).click();	
+			driver.findElement(By.id("submitbutton")).click();
+			Thread.sleep(2000);
 			Assert.assertEquals(driver.getTitle(), "Digicomp Result");
 		}
 		finally {
