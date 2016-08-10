@@ -41,7 +41,7 @@ public class EndToEndTest {
 	public static String URLFactory(String environment) {
 		
 		Map<String, String> urls = new HashMap<String, String>();
-		urls.put("QA", "http://localhost:8080/tmf3");
+		urls.put("QA", "http://localhost:9999/tmf2"); //goes to docker container
 		urls.put("PRODUCTION", "http://ec2-54-200-74-47.us-west-2.compute.amazonaws.com:8080/tmf3/");
 		urls.put("VAGRANT", "http://192.168.1.150:8080/tmf2/");	
 		
@@ -70,7 +70,7 @@ public class EndToEndTest {
 			Assert.assertEquals(driver.getTitle(), "Digicomp Result");
 		}
 		finally {
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 			driver.quit();
 		}
 	}
