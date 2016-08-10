@@ -42,7 +42,7 @@ public class EndToEndTest {
 		
 		Map<String, String> urls = new HashMap<String, String>();
 		urls.put("QA", "http://localhost:9999/tmf2"); //goes to docker container
-		urls.put("PRODUCTION", "http://ec2-54-200-74-47.us-west-2.compute.amazonaws.com:8080/tmf3/");
+		urls.put("PRODUCTION", "http://ec2-54-213-34-255.us-west-2.compute.amazonaws.com:8080/tmf2/");
 		urls.put("VAGRANT", "http://192.168.1.150:8080/tmf2/");	
 		
 		String url = (String) urls.get(environment);
