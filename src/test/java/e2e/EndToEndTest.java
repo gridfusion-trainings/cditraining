@@ -25,8 +25,8 @@ public class EndToEndTest {
 	  public Object[][] getCapabilities() {
 	    
 	    return new Object[][]{
-	    	//{DesiredCapabilities.firefox()},
-	    	{DesiredCapabilities.chrome()},
+	    	{DesiredCapabilities.firefox()},
+	    	//{DesiredCapabilities.chrome()},
 	    };
 	  }
 	
@@ -56,12 +56,13 @@ public class EndToEndTest {
 		WebDriver driver = new RemoteWebDriver(new URL(GRIDURL), caps);
 		
 		driver.get(url);
+		System.out.println("PAGE TITLE: " + driver.getTitle());
 
 		try {
 			driver.findElement(By.id("firstname")).sendKeys("Michael");
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
 			driver.findElement(By.id("submitbutton")).click();
-			//Thread.sleep(50); //TODO: this should be removed. Bug in Selenium3?
+			Thread.sleep(50); //TODO: this should be removed. Bug in Selenium3?
 			Assert.assertEquals(driver.getTitle(), "Digicomp Result");
 		}
 		finally {

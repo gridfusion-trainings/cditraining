@@ -32,35 +32,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">GRIDFUSION</a>
-                </div>
-
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <!--<li class="active"><a href="#">Home</a></li>-->
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Service Portfolio<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#consulting">Consulting</a></li>
-                                <li><a href="#managementcoaching">Management Coaching</a></li>
-                                <li><a href="#assessments">Assessments</a></li>
-                                <li><a href="#proofofconcepts">Proof of Concepts</a></li>
-                                <li><a href="#training">Training</a></li>
-                                <!--
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                                -->
-                            </ul>
-                        </li>
-                        <li><a href="#philosophy">Philosophy</a></li>
-                        <li><a href="http://gridfusion.net/blog">Blog</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="mailto:info@gridfusion.net"><span class="glyphicon glyphicon-envelope"></span></a></li>
-                    </ul>
-                </div>
+                    <a class="navbar-brand">ELEMENT34</a>
+                </div
             </div>
         </div>
 
