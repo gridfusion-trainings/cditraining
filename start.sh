@@ -15,4 +15,7 @@ echo "starting tomcat QA"
 sudo docker run -d -p 9999:8080 --expose=8080 palotas/tomcat7-cdi 
 
 echo "starting tomcat PRODUCTION"
-sudo docker run -d -p 9998:8080 --expose=8080 palotas/tomcat7-cdi 
+sudo docker run -d -p 9998:8080 --expose=8080 palotas/tomcat7-cdi
+
+echo "starting sonarqube"
+docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
