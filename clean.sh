@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "delete all war files in jenkins_home"
+cd /home/e34
 find . -name "*.war" -exec rm -rf {} \;
 
 echo "stop and remove all docker containers"

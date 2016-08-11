@@ -25,8 +25,8 @@ public class EndToEndTest {
 	  public Object[][] getCapabilities() {
 	    
 	    return new Object[][]{
-	    	{DesiredCapabilities.firefox()},
-	    	//{DesiredCapabilities.chrome()},
+	    	//{DesiredCapabilities.firefox()},
+	    	{DesiredCapabilities.chrome()},
 	    };
 	  }
 	
