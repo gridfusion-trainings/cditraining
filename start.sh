@@ -19,3 +19,6 @@ sudo docker run -d -p 9998:8080 --expose=8080 palotas/tomcat7-cdi
 
 echo "starting sonarqube"
 sudo docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+
+echo "setting git timeout to 5 minutes"
+git config credential.helper 'cache --timeout=300'
