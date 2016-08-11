@@ -20,20 +20,13 @@ public class EndToEndTest {
 	
 	//local remote webdriver
 	public final String GRIDURL="http://10.0.2.15:4444/wd/hub";
-	
-	//Selenium Grid Hub with Android on OSX
-	//public final String GRIDURL="http://192.168.1.112:4444/wd/hub";
 
-	
 	@DataProvider(name = "platforms", parallel = true)
 	  public Object[][] getCapabilities() {
 	    
 	    return new Object[][]{
-	    	{DesiredCapabilities.firefox()},
-	    	//{DesiredCapabilities.chrome()},
-	    	//{DesiredCapabilities.safari()},	        
-	    	//{androidWeb},
-	    	//{ipad},
+	    	//{DesiredCapabilities.firefox()},
+	    	{DesiredCapabilities.chrome()},
 	    };
 	  }
 	
@@ -68,7 +61,7 @@ public class EndToEndTest {
 			driver.findElement(By.id("firstname")).sendKeys("Michael");
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
 			driver.findElement(By.id("submitbutton")).click();
-			Thread.sleep(2000); //TODO: this should be removed. Bug in Selenium3?
+			//Thread.sleep(50); //TODO: this should be removed. Bug in Selenium3?
 			Assert.assertEquals(driver.getTitle(), "Digicomp Result");
 		}
 		finally {
