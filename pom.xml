@@ -87,6 +87,18 @@
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
+
+
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://172.17.0.3:8080/manager/text</url>
+                    <server>TomcatQA</server>
+                    <path>/cisco</path>
+                </configuration>
+            </plugin>
 		</plugins>
 
 		<finalName>cdi-${project.version}-${BUILD_ID}</finalName>
