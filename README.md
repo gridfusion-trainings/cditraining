@@ -1,5 +1,42 @@
 # CDI Training 
 
+### Setting up the VM 
+- start VirtualBox and import the OVA/OVF file 
+- in the VM, start a terminal window
+- cd /Workspace/cditraining
+- ./start.sh
+- when prompted enter the sudo password "111111"
+- --> docker container should be started now
+- open Chrome browser
+- go to http://localhost:8080
+- --> you should see Jenkins (this may take a moment for Jenkins to initialize)
+- go bck to Terminal window
+- make sure you are in /home/e34/Workspace/cditraining
+- mvn clean 
+- mvn test -Dgroups=unit
+- git status
+- git pull origin master 
+- start IntelliJ 
+
+- in terminal: cd /home/e34/Downloads
+- java -jar selenium-server-standalone-3.0.0-beta2.jar
+- Selenium server is up and running message should appear in terminal 
+- in IntelliJ open EndToEndTest.java (in package src/test/e2e) 
+- double-click on method fillPage() 
+- right-click and select Run 'fillPage()'
+- --> test will fail but browser should at least open 
+
+- in browser go to http://localhost:8080
+- click on "build" icon in "unittests" job (this will trigger the build pipeline) 
+- click on the cisco-pipeline tab to view the build pipeline 
+
+- open "Seleniumtraining" project 
+- go to src/test/java/webdriverBasics and open BasicTests.java
+- right-click on "firstFirefoxTest()" and Run the test 
+- browser should open and navigate to element34.net website 
+
+
+
 ### Run tests with Maven
 Unit tests: mvn test -Dgroup=unit</br>
 Integration tests: mvn test -Dgroup=integration </br>
