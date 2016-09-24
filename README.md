@@ -132,6 +132,12 @@ make sure you are logged in: `docker login`
 
 `$ docker push palotas/sinatra`
 
+### Copy file to docker container
+sudo docker cp cdi-1.2-SNAPSHOT-null.war thirsty_ptolemy:/usr/local/tomcat/webapps/cisco.war
+
+### Attach to running docker container 
+sudo docker exec -i -t  thirsty_ptolemy /bin/bash
+
 
 
 
