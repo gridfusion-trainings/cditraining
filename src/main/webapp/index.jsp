@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">ELEMENT34 Solutions</a>
+                    <a class="navbar-brand">ELEMENT34 Solutions TEST</a>
                 </div>
 
             </div>
