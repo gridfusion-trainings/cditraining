@@ -50,7 +50,7 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.setInputProcessor(mockedInputProcessor);
 		
-		Assert.assertEquals(calc.calculateNumberOfChars("Mi ch ael    Palo tas"), 14);		
+		Assert.assertEquals(calc.calculateNumberOfChars("Mi ch ael    Palo tas"), 15);
 		
 	}
 	
