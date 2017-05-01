@@ -63,7 +63,7 @@ public class EndToEndTest {
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
 			driver.findElement(By.id("submitbutton")).click();
 			Thread.sleep(50); //TODO: this should be removed. Bug in Selenium3?
-			Assert.assertEquals(driver.getTitle(), "CISCO Vienna Result");
+			Assert.assertEquals(driver.getTitle(), "Cisco Vienna Result");
 		}
 		finally {
 			Thread.sleep(2000);
