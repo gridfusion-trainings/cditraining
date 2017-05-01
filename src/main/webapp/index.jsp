@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MF Engineering - Enter</title>
+    <title>Devops Training Entry Page</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">ELEMENT34 Solutions TEST234</a>
+                    <a class="navbar-brand">ELEMENT34 Solutions GmbH</a>
                 </div>
 
             </div>
