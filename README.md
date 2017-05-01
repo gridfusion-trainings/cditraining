@@ -19,7 +19,7 @@
 - start IntelliJ 
 
 - in terminal: `cd /home/e34/Downloads`
-- `java -jar selenium-server-standalone-3.0.0-beta2.jar`
+- `java -jar selenium-server-standalone-3.4.0.jar`
 - Selenium server is up and running message should appear in terminal 
 - in IntelliJ open EndToEndTest.java (in package src/test/e2e) 
 - double-click on method fillPage() 
@@ -49,8 +49,7 @@ mvn test -Dgroup=end2end -Denv=QA / PRODUCTION / VAGRANT
 mvn clean test cobertura:cobertura -Dgroup=unit,integration (--> this will run both groups of tests)
 
 ### SONAR
-cd /home/gridfusion/SeleniumTraining/sonar-3.7.4/bin/linux-x86-32 </br>
-./sonar.sh start </br>
+SONAR is running on http://localhost:9000 (via Docker container)
 mvn clean test -Dgroup=unit sonar:sonar </br>
 
 ### start EC2 environment
