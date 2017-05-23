@@ -96,7 +96,7 @@
                 <configuration>
                     <url>http://172.17.0.3:8080/manager/text</url>
                     <server>TomcatQA</server>
-                    <path>/cisco</path>
+                    <path>/vpbank</path>
                 </configuration>
             </plugin>
 		</plugins>
