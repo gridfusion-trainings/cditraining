@@ -19,8 +19,7 @@ import org.testng.annotations.Test;
 public class EndToEndTest {
 	
 	//local remote webdriver
-	//public final String GRIDURL="http://10.0.2.15:4444/wd/hub";
-	public final String GRIDURL="https://789b1ea7eca7.element34.net/wd/hub";
+	public final String GRIDURL="http://10.0.2.15:4444/wd/hub";
 
 	@DataProvider(name = "platforms", parallel = true)
 	  public Object[][] getCapabilities() {
