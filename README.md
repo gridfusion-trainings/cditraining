@@ -52,6 +52,27 @@ mvn clean test cobertura:cobertura -Dgroup=unit,integration (--> this will run b
 SONAR is running on http://localhost:9000 (via Docker container)
 mvn clean test -Dgroup=unit sonar:sonar </br>
 
+### Copy file to docker container
+sudo docker cp cdi-1.2-SNAPSHOT-null.war tomcat-QA:/usr/local/tomcat/webapps/cisco.war
+
+### Attach to running docker container
+sudo docker exec -i -t tomcat-QA /bin/bash
+
+##Set up AWS Docker instance
+- go to AWS console -> AMIs
+- launch Docker-Base AMI 
+- make sure all traffic is open
+- ssh into instance: ssh -i "gridfusion.pem" ec2-user@ec2-54-191-143-205.us-west-2.compute.amazonaws.com
+- docker run -d --name aws-prod -p 9998:8080 palotas/tomcat7-cdi
+- check that container is up: http://ec2-54-191-143-205.us-west-2.compute.amazonaws.com:9998
+- in Jenkins job add container to deployProd job: admin/admin, http://ec2-54-218-104-110.us-west-2.compute.amazonaws.com:9998/
+
+
+
+
+
+
+
 ### start EC2 environment
 knife ec2 server create  -I ami-7d8bdb4d -f t1.micro --ssh-user ubuntu  --identity-file ~/Desktop/gridfusion.pem --region us-west-2
 
@@ -131,11 +152,7 @@ make sure you are logged in: `docker login`
 
 `$ docker push palotas/sinatra`
 
-### Copy file to docker container
-sudo docker cp cdi-1.2-SNAPSHOT-null.war thirsty_ptolemy:/usr/local/tomcat/webapps/cisco.war
 
-### Attach to running docker container 
-sudo docker exec -i -t  thirsty_ptolemy /bin/bash
 
 
 
