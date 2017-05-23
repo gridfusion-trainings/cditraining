@@ -35,8 +35,8 @@ public class EndToEndTest {
 		
 		Map<String, String> urls = new HashMap<String, String>();
 		urls.put("QA", "http://172.17.0.3:8080/vpbank/"); //goes to docker container
-		urls.put("PRODUCTION", "http://ec2-54-191-143-205.us-west-2.compute.amazonaws.com:9998/vpbank");
-		//urls.put("PRODUCTION", "http://172.17.0.4:8080/vpbank");
+		urls.put("AWS", "http://ec2-54-191-143-205.us-west-2.compute.amazonaws.com:9998/vpbank");
+		urls.put("PRODUCTION", "http://172.17.0.4:8080/vpbank");
 		urls.put("VAGRANT", "http://192.168.1.150:8080/vpbank/");
 		
 		String url = (String) urls.get(environment);
