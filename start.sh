@@ -25,5 +25,5 @@ echo "starting sonarqube"
 sudo docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 
 echo "setting git timeout to 5 minutes"
-cd /home/e34/Workspace/cditraining
+cd /home/e34/workspace/cditraining
 git config credential.helper 'cache --timeout=300'
