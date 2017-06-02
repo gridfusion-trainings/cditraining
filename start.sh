@@ -10,7 +10,7 @@ sudo docker rm --force `sudo docker ps -qa`
 
 
 #echo "starting jenkins"
-#sudo docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v /home/e34/jenkins_home:/var/jenkins_home palotas/e34_jenkins_noadmin:0.5
+#sudo docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v /home/e34/jenkins_home:/var/jenkins_home palotas/e34_jenkins_noadmin:0.6
 
 echo "starting new jenkins"
 sudo docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v /home/e34/jenkins_home:/var/jenkins_home jenkins
@@ -28,6 +28,6 @@ echo "starting busybox"
 sudo docker pull palotas/busybox
 sudo docker run -d --name busybox palotas/busybox sh
 
-echo "setting git timdockereout to 5 minutes"
+echo "setting git timeout to 5 minutes"
 cd /home/e34/workspace/cditraining
 git config credential.helper 'cache --timeout=300'
