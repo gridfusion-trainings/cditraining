@@ -26,8 +26,8 @@ sudo docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 
 echo "starting busybox"
 sudo docker pull palotas/busybox
-sudo docker run -d --pull --name busybox palotas/busybox sh
+sudo docker run -d --name busybox palotas/busybox sh
 
-echo "setting git timeout to 5 minutes"
+echo "setting git timdockereout to 5 minutes"
 cd /home/e34/workspace/cditraining
 git config credential.helper 'cache --timeout=300'
