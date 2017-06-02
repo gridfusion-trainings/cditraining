@@ -3,7 +3,5 @@ USER root
 RUN apt-get update
 RUN apt-get install --yes vim
 
-EXPOSE 8080
-
 #download tomcat-users.xml file and replace existing one
 ADD https://raw.githubusercontent.com/gridfusion-trainings/cditraining/master/resources/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
