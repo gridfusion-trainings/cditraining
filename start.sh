@@ -10,7 +10,7 @@ sudo docker rm --force `sudo docker ps -qa`
 
 
 #echo "starting jenkins"
-#sudo docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v /home/e34/jenkins_home:/var/jenkins_home palotas/jenkins-cdi:0.1
+#sudo docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v /home/e34/jenkins_home:/var/jenkins_home palotas/e34_jenkins_noadmin:0.5
 
 echo "starting new jenkins"
 sudo docker run -d --name jenkins -p 8080:8080 -p 50000:50000 -v /home/e34/jenkins_home:/var/jenkins_home jenkins
@@ -25,6 +25,7 @@ echo "starting sonarqube"
 sudo docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 
 echo "starting busybox"
+sudo docker pull palotas/busybox
 sudo docker run -d --pull --name busybox palotas/busybox sh
 
 echo "setting git timeout to 5 minutes"
