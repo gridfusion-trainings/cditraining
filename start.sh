@@ -2,7 +2,7 @@
 
 echo "delete all war files in jenkins_home"
 cd /home/e34
-find . -name "*.war" -exec rm -rf {} \;
+sudo find . -name "*.war" -exec rm -rf {} \;
 
 echo "stop and remove all docker containers"
 sudo docker stop $(sudo docker ps -a -q)
