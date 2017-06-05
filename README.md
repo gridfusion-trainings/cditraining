@@ -41,13 +41,13 @@ sudo docker cp cdi-1.2-SNAPSHOT-null.war tomcat-QA:/usr/local/tomcat/webapps/cis
 sudo docker exec -i -t tomcat-QA /bin/bash
 
 ## Set up AWS Docker instance
-go to AWS console -> AMIs
-launch Docker-Base AMI 
-make sure all traffic is open
-ssh into instance: ssh -i "gridfusion.pem" ec2-user@ec2-54-191-143-205.us-west-2.compute.amazonaws.com
-docker run -d --name aws-prod -p 9998:8080 palotas/tomcat7-cdi
-check that container is up: http://ec2-54-191-143-205.us-west-2.compute.amazonaws.com:9998
-in Jenkins job add container to deployProd job: admin/admin, http://ec2-54-218-104-110.us-west-2.compute.amazonaws.com:9998/
+- go to AWS console -> AMIs
+- launch Docker-Base AMI 
+- make sure all traffic is open
+- ssh into instance: ssh -i "gridfusion.pem" ec2-user@ec2-54-191-143-205.us-west-2.compute.amazonaws.com
+- docker run -d --name aws-prod -p 9998:8080 palotas/tomcat7-cdi
+- check that container is up: http://ec2-54-191-143-205.us-west-2.compute.amazonaws.com:9998
+- in Jenkins job add container to deployProd job: admin/admin, http://ec2-54-218-104-110.us-west-2.compute.amazonaws.com:9998/
 
 
 ### Run tests with Maven
