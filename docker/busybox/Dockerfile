@@ -1,3 +1,3 @@
 FROM busybox
 
-ENTRYPOINT ["top"]
+ENTRYPOINT ["vi"]
