@@ -38,7 +38,7 @@ sudo docker cp cdi-1.2-SNAPSHOT-null.war tomcat-QA:/usr/local/tomcat/webapps/cis
 ### Attach to running docker container
 sudo docker exec -i -t tomcat-QA /bin/bash
 
-##Set up AWS Docker instance
+## Set up AWS Docker instance
 - go to AWS console -> AMIs
 - launch Docker-Base AMI 
 - make sure all traffic is open
@@ -46,6 +46,37 @@ sudo docker exec -i -t tomcat-QA /bin/bash
 - docker run -d --name aws-prod -p 9998:8080 palotas/tomcat7-cdi
 - check that container is up: http://ec2-54-191-143-205.us-west-2.compute.amazonaws.com:9998
 - in Jenkins job add container to deployProd job: admin/admin, http://ec2-54-218-104-110.us-west-2.compute.amazonaws.com:9998/
+
+## DOCKER Exercise
+- docker pull ubuntu:17.04
+- docker run -ti --rm ubuntu:17.04
+- check if wget is there
+
+- build own ubuntu under palotas/ubuntu (FROM ubuntu:17.04)
+- docker build -t palotas/ubuntu
+- docker run -ti --rm palotas/ubuntu
+
+- edit Dockerfile and add wget
+    - RUN apt-get update
+    - RUN apt-get install -y wget
+- docker build -t palotas/ubuntu .
+- docker run -ti --rm palotas/ubuntu
+- check that wget is there
+- docker login / docker push
+- Users download palotas/ubuntu and play with it
+
+- in Docker Cloud create new repo
+- connect cditraining repo and create job for docker/ubuntu/Dockerfile
+- change Dockerfile (i.e. install vi) 
+- git push --> should build new docker image automatically
+- Users download palotas/ubuntu and play with it
+
+
+
+
+
+
+
 
 
 
