@@ -1,4 +1,131 @@
 # CDI Training 
+### General Agenda
+1. What is agile? 8.30 - 09.00
+2. What is DevOps? What is not DevOps? 09.00 - 
+https://www.slideshare.net/Codemotion/the-devops-disaster-15-ways-to-fail-at-devops-bert-jan-schrijver-codemotion-amsterdam-2016?qid=44911502-1e01-41d1-92fb-9382b72f7f25&v=&b=&from_search=5
+- Dev and operations engineers being responsible TOGETHER for the entire lifecycle of a product 
+- Development and operations engineers
+  working together on a shared goal : 
+  
+  building and running better-quality software
+  more quickly and more reliably
+  
+  Questions: 
+  1. DevOps is the same thing as
+     Continuous Delivery and Continuous Deployment
+  2. You need a central ‘DevOps team’
+     that handles all ops stuff
+  3. DevOps is only for
+     development and operations engineers
+  4. DevOps means
+     developers managing production
+  5. DevOps is only for
+     hipsters, startups and unicorns
+  6. You need containers, microservices
+     and ‘the cloud’ to do DevOps
+  7. DevOps is about
+     automation
+  8. DevOps is about
+     tools
+  9. DevOps is a job title -
+     something you can be certified in
+  10. DevOps replaces
+      Agile
+  11. You don’t need to define
+      what DevOps means to your organisation
+  12. You can do DevOps
+      without management buy-in
+  13. You can enforce DevOps
+      in an organisation
+  14. DevOps prevents
+      failure
+      
+  What is DevOps about:
+  - DevOps is about culture
+  - DevOps is about freedom and responsibility
+  - DevOps is about empathy
+
+
+3. What is CI / Why CI? - 10.00 
+- Reduzieren der Risiken
+- Reduktion des manuellen repetitiven Prozess
+- Generierung von deploybarer Software zu jeder Zeit
+- Bessere Visibilität in das Projekt
+- Erhöhte “Confidence” in das Produkt und das Team
+- Häufigere Lieferung von “Business Value” 
+- Bessere Qualität
+- Frühere Bugs
+- Bug Prevention anstatt late detection
+- Fast & frequent feedback
+
+4. Core Principles of CI 
+- Häufige Commits
+- Kein Commit von “broken Code”
+- Rote Builds müssen sofort gefixt werden 
+- Entwickler schreiben Tests
+- Alle Tests und Inspektionen müssen grün sein
+
+5. GIT 
+6. Maven 
+    - Create new maven project: ``mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false``
+    - Import into IntelliJ
+    - change JUnit version in pom.xml
+    - maven targets: clean, compile, test, package
+    - execute program: ``java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App``
+    - mvn install
+7. Introduction into main app 
+8. Build the app
+    - ``mvn package -DskipTests=true``
+    - copy war file to docker container: ``sudo docker cp cdi-1.2-SNAPSHOT-null.war tomcat-QA:/usr/local/tomcat/webapps/vpbank.war``
+    - go to: http://172.17.0.3:8080/vpbank 
+9. Introduction Test Automation
+
+    9.1 Unit Tests
+    - run in IntelliJ
+    - rin via maven: ``mvn clean test –Dgroup=unit``
+10. Automated Code Quality
+    - what do you think? 
+    - Cobertura: ``mvn cobertura:cobertura -Dgroup=unit``
+    - look at report: /home/e34/Workspace/cdiTraining/target/site/cobertura/index.html
+    - SONAR: ``mvn clean test -Dgroup=unit sonar:sonar``
+    
+11. JENKINS
+    - first build job: unit test 
+    - deploy to QA 
+    - manually test on tomcat-QA
+    
+12. SELENIUM 
+13. TEST FRAMEWORKS / TestNG Introduction 
+14. WEBDRIVER BASICS
+15. REMOTE WEBDRIVER
+16. SELENIUM GRID 
+17. Complete the pipeline 
+18. DOCKER Excercise 
+    - docker pull ubuntu:17.04
+    - docker run -ti --rm ubuntu:17.04
+    - check if wget is there
+    - build own ubuntu under palotas/ubuntu (FROM ubuntu:17.04)
+    - docker build -t palotas/ubuntu
+    - docker run -ti --rm palotas/ubuntu
+    - edit Dockerfile and add wget
+        - RUN apt-get update
+        - RUN apt-get install -y wget
+    - docker build -t palotas/ubuntu .
+    - docker run -ti --rm palotas/ubuntu
+    - check that wget is there
+    - docker login / docker push
+    - Users download palotas/ubuntu and play with it
+    - in Docker Cloud create new repo
+    - connect cditraining repo and create job for docker/ubuntu/Dockerfile
+    - change Dockerfile (i.e. install vi) 
+    - git push --> should build new docker image automatically
+    - Users download palotas/ubuntu and play with it
+
+
+
+
+        
+
 
 
 
@@ -47,29 +174,7 @@ sudo docker exec -i -t tomcat-QA /bin/bash
 - check that container is up: http://ec2-54-191-143-205.us-west-2.compute.amazonaws.com:9998
 - in Jenkins job add container to deployProd job: admin/admin, http://ec2-54-218-104-110.us-west-2.compute.amazonaws.com:9998/
 
-## DOCKER Exercise
-- docker pull ubuntu:17.04
-- docker run -ti --rm ubuntu:17.04
-- check if wget is there
 
-- build own ubuntu under palotas/ubuntu (FROM ubuntu:17.04)
-- docker build -t palotas/ubuntu
-- docker run -ti --rm palotas/ubuntu
-
-- edit Dockerfile and add wget
-    - RUN apt-get update
-    - RUN apt-get install -y wget
-- docker build -t palotas/ubuntu .
-- docker run -ti --rm palotas/ubuntu
-- check that wget is there
-- docker login / docker push
-- Users download palotas/ubuntu and play with it
-
-- in Docker Cloud create new repo
-- connect cditraining repo and create job for docker/ubuntu/Dockerfile
-- change Dockerfile (i.e. install vi) 
-- git push --> should build new docker image automatically
-- Users download palotas/ubuntu and play with it
 
 
 
