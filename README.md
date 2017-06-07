@@ -65,7 +65,32 @@ https://www.slideshare.net/Codemotion/the-devops-disaster-15-ways-to-fail-at-dev
 - Entwickler schreiben Tests
 - Alle Tests und Inspektionen müssen grün sein
 
-5. GIT 
+5. GIT
+- mkdir myproject
+- git init
+- git status
+- vi file.txt
+- git add file.txt
+- git status
+- git commit -m "initial checkin"
+- add new entry in file.txt
+- git commit -am "added entry"
+- git log
+- git revert <commitID>
+- change file.txt
+- git diff
+- git branch
+- git branch dev
+- git checkout dev
+- vi file.txt
+- git commit -am "added entry on the branch"
+- git checkout master
+- cat file.txt
+- git merge dev
+- cat file.txt
+- git branch -d dev
+
+
 6. Maven 
     - Create new maven project: ``mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false``
     - Import into IntelliJ
