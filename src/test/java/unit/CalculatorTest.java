@@ -30,7 +30,7 @@ public class CalculatorTest {
 		Calculator calc = new Calculator();
 		calc.setInputProcessor(mockedInputProcessor);
 				
-		Assert.assertEquals(calc.calculateNumberOfChars("Michael Palotas"), 14);
+		Assert.assertEquals(calc.calculateNumberOfChars("Michael Palotas"), 13);
 		
 		//verify that the call to the mock was done with the correct parameter
 		verify(mockedInputProcessor).stripWhitespaces("Michael Palotas");
