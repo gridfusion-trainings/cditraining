@@ -156,6 +156,8 @@ Set up AWS Docker instance
     - change Dockerfile (i.e. install vi) 
     - git push --> should build new docker image automatically
     - Users download palotas/ubuntu and play with it
+    
+    - cloud.docker.com -> set up automated builds 
 
 
 
