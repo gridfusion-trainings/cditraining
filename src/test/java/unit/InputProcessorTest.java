@@ -11,20 +11,20 @@ public class InputProcessorTest {
 	
 
 	
-	@Test(groups="unit")
-	public void shouldRemoveWhitespacesInName() {
-		
-		InputProcessor inputProcessor = new InputProcessor();
-		Assert.assertEquals(inputProcessor.stripWhitespaces("Michael Palotas"), "MichaelPalotas");
-	}
-
-	
-	@Test(groups="unit")
-	public void shouldRemoveMultipleWhitespacesInName() {
-		
-		InputProcessor inputProcessor = new InputProcessor();
-		Assert.assertEquals(inputProcessor.stripWhitespaces("Mi ch ael Pal o tas "), "MichaelPalotas");
-	}
+//	@Test(groups="unit")
+//	public void shouldRemoveWhitespacesInName() {
+//
+//		InputProcessor inputProcessor = new InputProcessor();
+//		Assert.assertEquals(inputProcessor.stripWhitespaces("Michael Palotas"), "MichaelPalotas");
+//	}
+//
+//
+//	@Test(groups="unit")
+//	public void shouldRemoveMultipleWhitespacesInName() {
+//
+//		InputProcessor inputProcessor = new InputProcessor();
+//		Assert.assertEquals(inputProcessor.stripWhitespaces("Mi ch ael Pal o tas "), "MichaelPalotas");
+//	}
 	
 	
 }
