@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">Digicomp123</a>
+                    <a class="navbar-brand">SIX</a>
                 </div>
 
             </div>
