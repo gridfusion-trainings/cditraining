@@ -14,7 +14,7 @@ public class CalculatorTest {
 
 	@Test(groups="unit")
 	public void falseTest() {
-		Assert.assertTrue(true);
+		Assert.assertTrue(false);
 	}
 	
 	
@@ -22,7 +22,7 @@ public class CalculatorTest {
 	public void shouldRemoveSingleWhitespaceInName() {
 
 		InputProcessor mockedInputProcessor = mock(InputProcessor.class);
-
+        //blah blah
 		// stubbing appears before the actual execution
 		when(mockedInputProcessor.stripWhitespaces("Michael Palotas")).thenReturn("MichaelPalotas");
 
