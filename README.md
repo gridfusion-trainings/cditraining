@@ -164,6 +164,7 @@ Set up AWS Docker instance
 ## IP addresses
 tomcat-QA : 172.17.0.2
 tomcat-PROD: 172.17.0.3
+change jenkins job IP address to the above
 
         
 
