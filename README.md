@@ -161,7 +161,8 @@ Set up AWS Docker instance
 
 
 
-## IP addresses
+## Changes for Bison Training
+change start.sh: sudo docker run -d --net="host" --name jenkins -p 8080:8080 -p 50000:50000 -p 4444:4444 -v /home/e34/jenkins_home/jobs:/var/jenkins_home/jobs palotas/e34_jenkins_noadmin:0.7
 tomcat-QA : 172.17.0.2
 tomcat-PROD: 172.17.0.3
 change jenkins job IP address to the above
