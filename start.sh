@@ -10,7 +10,7 @@ sudo docker rm --force `sudo docker ps -qa`
 
 
 #echo "starting jenkins"
-sudo docker run -d --net="host" --name jenkins -p 8080:8080 -p 50000:50000 -p 4444:4444 -v /home/e34/jenkins_home/jobs:/var/jenkins_home/jobs palotas/e34_jenkins_noadmin:0.7
+sudo docker run -d --net="host" --name jenkins -p 8080:8080 -p 50000:50000 -p 4444:4444 -v /home/e34/jenkins_home/jobs:/var/jenkins_home/jobs --env HTTP_PROXY="http://10.241.2.69:8080" --env HTTPS_PROXY="http://10.241.2.69:8080" --env NO_PROXY="127.0.0.1, localhost, 192.168.*, 10.* 172.*" --env MAVEN_OPTS="-Dhttp.proxyHost=10.241.2.69 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=10.241.2.69 -Dhttps.proxyPort=8080 -Dhttp.nonProxyHosts=localhost|192.168.*|10.*|172.* -Dhttps.nonPorxyHosts=localhost|192.168.*|10.*|172.* -Djava.net.useSystemProxies=true" palotas/e34_jenkins_noadmin:0.7
 
 echo "starting tomcat QA"
 sudo docker run -d --name tomcat-QA -p 9999:8080 --expose=8080 palotas/tomcat7-cdi
