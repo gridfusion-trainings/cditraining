@@ -98,16 +98,18 @@ https://www.slideshare.net/Codemotion/the-devops-disaster-15-ways-to-fail-at-dev
     - maven targets: clean, compile, test, package
     - execute program: ``java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App``
     - mvn install
-7. Introduction into main app 
+7. Introduction into main app
+
 8. Build the app
     - ``mvn package -DskipTests=true``
-    - copy war file to docker container: ``sudo docker cp cdi-1.2-SNAPSHOT-null.war tomcat-QA:/usr/local/tomcat/webapps/vpbank.war``
-    - go to: http://172.17.0.3:8080/vpbank 
+    - copy war file to docker container: ``sudo docker cp cdi-1.2-SNAPSHOT-null.war tomcat-QA:/usr/local/tomcat/webapps/bison.war``
+    - go to: http://172.17.0.2:8080/bison
+
 9. Introduction Test Automation
 
     9.1 Unit Tests
     - run in IntelliJ
-    - rin via maven: ``mvn clean test –Dgroup=unit``
+    - run via maven: ``mvn clean test –Dgroup=unit``
 10. Automated Code Quality
     - what do you think? 
     - Cobertura: ``mvn cobertura:cobertura -Dgroup=unit``
