@@ -18,9 +18,6 @@ import org.testng.annotations.Test;
 //mark class as an integration test
 public class EndToEndTest {
 	
-	//local remote webdriver
-//	public final String GRIDURL="http://10.0.2.15:4444/wd/hub";
-//	public final String GRIDURL="http://192.168.1.75:4444/wd/hub";
 	public final String GRIDURL="http://localhost:4444/wd/hub";
 
 	@DataProvider(name = "platforms", parallel = true)
@@ -39,8 +36,7 @@ public class EndToEndTest {
 		urls.put("QA", "http://172.17.0.2:8080/digi/"); //goes to docker container
 		urls.put("AWS", "http://ec2-3-120-160-174.eu-central-1.compute.amazonaws.com:9998/digi");
 		urls.put("PRODUCTION", "http://172.17.0.3:8080/digi");
-		urls.put("VAGRANT", "http://192.168.1.150:8080/digi/");
-		
+
 		String url = (String) urls.get(environment);
 		return url;
 	}
@@ -64,7 +60,7 @@ public class EndToEndTest {
 			driver.findElement(By.id("firstname")).sendKeys("Michael");
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
 			driver.findElement(By.id("submitbutton")).click();
-			Thread.sleep(50); //TODO: this should be removed. Bug in Selenium3?
+			Thread.sleep(50);
 			Assert.assertEquals(driver.getTitle(), "Devops Training Result Page");
 		}
 		finally {
