@@ -1,4 +1,4 @@
-1. Build docker image: ´´´docker build -t palotas/webapp -f Dockerfile1```
+1. Build docker image:```docker build -t palotas/webapp -f Dockerfile1```
 
 2. Run app as regular docker application: ```docker run --rm -p 5000:5000 palotas/webapp```
 
