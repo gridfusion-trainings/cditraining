@@ -1,4 +1,11 @@
 # CDI Training 
+
+### Fix GIT repo (if needed)
+rm .git/refs/remotes/origin/master
+
+git fetch
+
+
 ### General Agenda
 1. What is agile? 8.30 - 09.00
 2. What is DevOps? What is not DevOps? 09.00 - 
