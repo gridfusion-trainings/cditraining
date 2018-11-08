@@ -346,7 +346,9 @@ make sure you are logged in: `docker login`
 
 `$ docker push palotas/sinatra`
 
-
+## Repo cleanup
+rm .git/refs/remotes/origin/master
+git fetch
 
 
 
