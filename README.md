@@ -5,6 +5,22 @@ rm .git/refs/remotes/origin/master
 
 git fetch
 
+### To be added to pom.xml for openjdk workaround
+
+<build>
+<plugins>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.22.1</version>
+    <configuration>
+        <useSystemClassLoader>false</useSystemClassLoader>
+    </configuration>
+</plugin>
+</plugins>
+</build>
+ 
+
 
 ### General Agenda
 1. What is agile? 8.30 - 09.00
