@@ -7,6 +7,7 @@ git fetch
 
 ### To be added to pom.xml for openjdk workaround
 
+'''
 <build>
 <plugins>
 <plugin>
@@ -19,7 +20,7 @@ git fetch
 </plugin>
 </plugins>
 </build>
- 
+'''
 
 
 ### General Agenda
