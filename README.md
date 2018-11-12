@@ -1,7 +1,9 @@
 # CDI Training 
 
-### pick Java version: 
-sudo update-alternatives --config java
+### Fix GIT repo (if needed)
+rm .git/refs/remotes/origin/master
+
+git fetch
 
 
 ### General Agenda
