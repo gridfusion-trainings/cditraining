@@ -17,8 +17,9 @@ import org.testng.annotations.Test;
 
 //mark class as an integration test
 public class EndToEndTest {
-	
-	public final String GRIDURL="http://localhost:4444/wd/hub";
+
+	//public final String GRIDURL="http://localhost:4444/wd/hub";
+	public final String GRIDURL="https://vm-106.element34.net/wd/hub";
 
 	@DataProvider(name = "platforms", parallel = true)
 	  public Object[][] getCapabilities() {
