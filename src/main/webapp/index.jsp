@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">BMW</a>
+                    <a class="navbar-brand">MF Pull Request</a>
                 </div>
 
             </div>
