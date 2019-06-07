@@ -55,41 +55,41 @@ public class CalculatorTest {
 	}
 
 
-//    @Test(groups = {"unit"})
-//    public void shouldReturnFullname() throws InputIsEmptyException {
-//
-//        Calculator calc = new Calculator();
-//        Assert.assertEquals(calc.calculateName("Michael", "Palotas"), "Michael Palotas");
-//    }
-//
-//
-//
-//    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
-//    public void shouldThrowInputIsEmptyExceptionBothNames() throws InputIsEmptyException {
-//
-//        Calculator calc = new Calculator();
-//        Assert.assertEquals("Michael Palotas", calc.calculateName("", ""));
-//    }
-//
-//    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
-//    public void shouldThrowInputIsEmptyExceptionFirstName() throws InputIsEmptyException {
-//
-//        Calculator calc = new Calculator();
-//        Assert.assertEquals("Michael Palotas", calc.calculateName("", "Palotas"));
-//    }
-//
-//    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
-//    public void shouldThrowInputIsEmptyExceptionLastName() throws InputIsEmptyException {
-//
-//        Calculator calc = new Calculator();
-//        Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", ""));
-//    }
-//
-//    @Test(groups = {"unit"})
-//    public void failedTest() throws InputIsEmptyException {
-//
-//        Assert.assertTrue(true);
-//    }
+    @Test(groups = {"unit"})
+    public void shouldReturnFullname() throws InputIsEmptyException {
+
+        Calculator calc = new Calculator();
+        Assert.assertEquals(calc.calculateName("Michael", "Palotas"), "Michael Palotas");
+    }
+
+
+
+    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
+    public void shouldThrowInputIsEmptyExceptionBothNames() throws InputIsEmptyException {
+
+        Calculator calc = new Calculator();
+        Assert.assertEquals("Michael Palotas", calc.calculateName("", ""));
+    }
+
+    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
+    public void shouldThrowInputIsEmptyExceptionFirstName() throws InputIsEmptyException {
+
+        Calculator calc = new Calculator();
+        Assert.assertEquals("Michael Palotas", calc.calculateName("", "Palotas"));
+    }
+
+    @Test(groups = {"unit"}, expectedExceptions=InputIsEmptyException.class)
+    public void shouldThrowInputIsEmptyExceptionLastName() throws InputIsEmptyException {
+
+        Calculator calc = new Calculator();
+        Assert.assertEquals("Michael Palotas", calc.calculateName("Michael", ""));
+    }
+
+    @Test(groups = {"unit"})
+    public void failedTest() throws InputIsEmptyException {
+
+        Assert.assertTrue(true);
+    }
 }
 
 
