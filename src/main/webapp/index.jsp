@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">MF Engineering Workshop</a>
+                    <a class="navbar-brand">Pull request test3</a>
                 </div>
 
             </div>
