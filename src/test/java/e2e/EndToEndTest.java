@@ -62,7 +62,7 @@ public class EndToEndTest {
 			driver.findElement(By.id("lastname")).sendKeys("Palotas");			
 			driver.findElement(By.id("submitbutton")).click();
 			Thread.sleep(50);
-			Assert.assertEquals(driver.getTitle(), "Devops Training Result Page - fail");
+			Assert.assertEquals(driver.getTitle(), "Devops Training Result Page");
 		}
 		finally {
 			Thread.sleep(2000);
