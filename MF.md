@@ -2,15 +2,14 @@
 
 - show code coverage test 
 - show config of Publish Coverage Report
+- unit test fails at first try 
 - 80 / 40 / 40 percent (-> if less than 40% line coverage then next step is not triggered)
-- run test with >40% coverage 
-- remove unit tests: CalculatorTests.java, commit and push 
-- rerun code coverage test -> test fails 
-- add unit tests again, cimmit, push 
+- run test with >40% coverage --> unit test still fails 
+- fix test and push 
+- build is green 
 
 - enable unittests job 
 - trigger codecoverage job (which triggers unittest job)
-- unit test fails at first try 
 
 
 - AMAZON
