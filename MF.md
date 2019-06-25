@@ -10,7 +10,7 @@
 
 - enable unittests job 
 - trigger codecoverage job (which triggers unittest job)
-- 
+- unit test fails at first try 
 
 
 - AMAZON
