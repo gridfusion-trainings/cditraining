@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand">Pull request test3</a>
+                    <a class="navbar-brand">Pull request test5</a>
                 </div>
 
             </div>
